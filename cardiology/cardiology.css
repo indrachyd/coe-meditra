@@ -1,0 +1,371 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header Section */
+.header {
+    position: relative;
+}
+
+.hero-section {
+    position: relative;
+    height: 300px;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), 
+                url('assets/doctor_cardiology.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+/* Back Button */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+.back-button i {
+    color: white;
+    font-size: 18px;
+}
+
+/* Cardiology Icon */
+.cardiology-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    z-index: 10;
+}
+
+.cardiology-icon img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.coe-label {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 0px;
+  opacity: 0.9;
+  letter-spacing: 0.5px;
+}
+
+.coe-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  line-height: 1.1;
+}
+
+/* Main Content */
+.main-content {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    margin-top: -20px;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    z-index: 3;
+}
+
+/* Introduction */
+.introduction {
+    margin-bottom: 30px;
+}
+
+.intro-text {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #555;
+  text-align: justify;
+}
+
+.intro-text strong {
+    color: #333;
+    font-weight: 600;
+}
+
+/* Services Accordion */
+.services-accordion {
+    margin-top: 20px;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 0;
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    user-select: none;
+}
+
+.accordion-header:hover {
+    background-color: rgba(0, 123, 255, 0.05);
+    margin: 0 -20px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.service-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #333;
+  flex: 1;
+}
+
+.accordion-icon {
+    font-size: 14px;
+    color: #666;
+    transition: transform 0.3s ease;
+    margin-left: 10px;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-content.active {
+    max-height: 2000px;
+}
+
+.section-description {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.service-list {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  padding: 0 0 10px 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.service-list li {
+    padding: 8px 0;
+    font-size: 14px;
+    color: #666;
+    position: relative;
+    padding-left: 20px;
+}
+
+.service-list li::before {
+    content: '•';
+    color: #007bff;
+    font-weight: bold;
+    position: relative;
+    left: -15px;
+    margin-right: 5px;
+}
+
+.sub-service-list {
+    list-style: none;
+    margin-top: 5px;
+    padding-left: 15px;
+}
+
+.sub-service-list li {
+    padding: 4px 0;
+    font-size: 13px;
+    color: #777;
+}
+
+.sub-service-list li::before {
+    content: '◦';
+    color: #007bff;
+    position: relative;
+    left: -10px;
+    margin-right: 5px;
+}
+
+/* Treatment sections */
+.treatment-section {
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.treatment-section h4 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.image-container {
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.treatment-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-description {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Active state styling */
+.accordion-item.active .accordion-header {
+    background-color: rgba(0, 123, 255, 0.05);
+    margin: 0 -20px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.accordion-item.active .service-title {
+    color: #007bff;
+}
+
+/* Touch-friendly improvements */
+.accordion-header {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive adjustments */
+@media (max-width: 375px) {
+    .hero-section {
+        height: 280px;
+        padding: 15px;
+    }
+    
+    .coe-title {
+        font-size: 28px;
+    }
+    
+    .cardiology-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .cardiology-icon img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .back-button {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .back-button i {
+        font-size: 16px;
+    }
+    
+    .main-content {
+        padding: 25px 15px;
+    }
+    
+    .intro-text {
+        font-size: 15px;
+    }
+    
+    .service-title {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    .hero-section {
+        height: 260px;
+    }
+    
+    .coe-title {
+        font-size: 24px;
+    }
+    
+    .main-content {
+        padding: 20px 12px;
+    }
+    
+    .intro-text {
+        font-size: 14px;
+    }
+}

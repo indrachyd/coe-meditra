@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oncology - Medistra COE</title>
+    <link rel="stylesheet" href="oncology.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="header">
+      <div class="hero-section">
+        <!-- Back Button -->
+        <button class="back-button" onclick="history.back()">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <!-- Oncology Icon -->
+        <div class="oncology-icon">
+          <img src="assets/icon_oncology.png" alt="Oncology Icon" />
+        </div>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+          <p class="coe-label">Center of Excellence</p>
+          <h1 class="coe-title">Oncology</h1>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Introduction -->
+      <section class="introduction">
+        <p class="intro-text">
+          The Hematology & Oncology Clinic provides integrated services for the
+          diagnosis and treatment of both oncology and hematology cases.
+        </p>
+        <p class="intro-text">
+          Our clinic offers comprehensive care supported by advanced medical
+          procedures and professional expertise
+        </p>
+      </section>
+
+      <!-- Services Accordion -->
+      <section class="services-accordion">
+        <div class="accordion-item active">
+          <div class="accordion-header">
+            <span class="service-title">Types of Procedures</span>
+            <i class="fas fa-chevron-up accordion-icon"></i>
+          </div>
+          <div class="accordion-content active">
+            <ol class="numbered-service-list">
+              <li>
+                <strong class="numbering-accordion-title">Tumor Surgery</strong>
+                <br />
+                A surgical procedure to remove tumors, aiming to prevent cancer
+                spread, inhibit malignancy growth, and assist in diagnostic
+                evaluation.
+              </li>
+              <li>
+                <strong class="numbering-accordion-title"
+                  >Systemic Cancer Therapy:</strong
+                >
+                <ul class="sub-service-list">
+                  <li>
+                    <strong>Cytostatics (Chemotherapy):</strong> Drugs designed
+                    to destroy or inhibit the growth of cancer cells.
+                  </li>
+                  <li>
+                    <strong>Targeted Therapy:</strong> Specifically targets
+                    cancer cells with minimal impact on healthy tissue.
+                  </li>
+                  <li>
+                    <strong>Immunotherapy:</strong> Enhances the immune system
+                    or helps it identify and destroy cancer cells.
+                  </li>
+                  <li>
+                    <strong>Hormonal Therapy:</strong> Blocks the hormones that
+                    cancer cells need to grow and develop.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong class="numbering-accordion-title"
+                  >HSCT (Hematopoietic Stem Cell Transplantation)</strong
+                >
+                <br />
+                A medical procedure used to restore bone marrow function,
+                especially for patients with blood cancers such as leukemia.
+              </li>
+              <li>
+                <strong class="numbering-accordion-title"
+                  >Robotic Prostate Biopsy</strong
+                >
+                <br />
+                A minimally invasive procedure using robotic technology to
+                obtain prostate tissue samples with high precision for accurate
+                diagnosis.
+              </li>
+              <li>
+                <strong class="numbering-accordion-title"
+                  >Supportive and Palliative Care Therapy</strong
+                >
+                <br />
+                Care designed to improve quality of life for patients and their
+                families while facing serious or chronic illness.
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="accordion-item active">
+          <div class="accordion-header">
+            <span class="service-title">Our Excellence in Cancer Care</span>
+            <i class="fas fa-chevron-up accordion-icon"></i>
+          </div>
+          <div class="accordion-content active">
+            <p class="section-description">
+              Medistra’s oncology services are supported by cutting-edge medical
+              technology, including Robotic Prostate Surgery, robotic-assisted
+              system that allows for greater surgical precision, minimal
+              invasiveness, and faster recovery for prostate cancer patients.
+            </p>
+            <p class="section-description">
+              We also features a dedicated oncology clinic designed to deliver
+              coordinated and patient-centered cancer care.
+            </p>
+            <p class="section-description">
+              As part of its commitment to medical innovation, Medistra
+              offers Hematopoietic Stem Cell Transplantation (HSCT), a globally
+              recognized standard treatment for leukemia and other blood-related
+              cancers.
+            </p>
+            <p class="section-description">
+              These services are delivered by an experienced, multidisciplinary
+              medical team comprised of oncology consultants and specialists
+              from various fields, working together to provide a holistic
+              approach to cancer diagnosis, treatment, and recovery.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      // Accordion functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const accordionItems = document.querySelectorAll(".accordion-item");
+
+        accordionItems.forEach((item) => {
+          const header = item.querySelector(".accordion-header");
+          const content = item.querySelector(".accordion-content");
+          const icon = item.querySelector(".accordion-icon");
+
+          header.addEventListener("click", function () {
+            const isActive = item.classList.contains("active");
+
+            // Close all accordion items
+            accordionItems.forEach((otherItem) => {
+              otherItem.classList.remove("active");
+              otherItem
+                .querySelector(".accordion-content")
+                .classList.remove("active");
+              const otherIcon = otherItem.querySelector(".accordion-icon");
+              otherIcon.classList.remove("fa-chevron-up");
+              otherIcon.classList.add("fa-chevron-down");
+            });
+
+            // Open clicked item if it wasn't active
+            if (!isActive) {
+              item.classList.add("active");
+              content.classList.add("active");
+              icon.classList.remove("fa-chevron-down");
+              icon.classList.add("fa-chevron-up");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
