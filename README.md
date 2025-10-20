@@ -12,15 +12,20 @@ A responsive website showcasing Medistra Hospital's Centers of Excellence (COE)
 
 ## Features
 
-- **Responsive Design** - Mobile-first approach UI
-- **Interactive Accordions** - Expandable content sections
-- **Touch-Friendly** - Optimized for mobile devices
+- **Mobile-first approach UI**
+- **Expandable content sections**
+- **Optimized for mobile devices**
 
 ## Project Structure
 
 medistra-coe-page/
-├── cardiology/ (cardiology.html, cardiology.css, assets/)
-├── orthopedy/ (orthopedy.html, orthopedy.css, assets/)
-├── oncology/ (oncology.html, oncology.css, assets/)
-├── hepatology/ (hepatology.html, hepatology.css, assets/)
-└── infection/ (infection.html, infection.css, assets/)
+- **cardiology/** - Cardiology specialty page
+- **orthopedy/** - Orthopedic specialty page  
+- **oncology/** - Oncology specialty page
+- **hepatology/** - Hepatology specialty page
+- **infection/** - Infectious diseases specialty page
+
+Each directory contains:
+- `[specialty].html` - Main page file
+- `[specialty].css` - Styling file
+- `assets/` - Images and icons
