@@ -4,11 +4,11 @@ A responsive website showcasing Medistra Hospital's Centers of Excellence (COE)
 
 ## Centers of Excellence
 
-- **Cardiology** - 
-- **Orthopedic** - 
-- **Oncology** - 
-- **Hepatology** - 
-- **Tropical & Infectious Diseases** - 
+- **Cardiology** 
+- **Orthopedic** 
+- **Oncology** 
+- **Hepatology** 
+- **Tropical & Infectious Diseases**
 
 ## Features
 
