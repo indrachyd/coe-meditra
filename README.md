@@ -19,23 +19,8 @@ A responsive website showcasing Medistra Hospital's Centers of Excellence (COE)
 ## Project Structure
 
 medistra-coe-page/
-├── cardiology/
-│ ├── cardiology.html
-│ ├── cardiology.css
-│ └── assets/
-├── orthopedy/
-│ ├── orthopedy.html
-│ ├── orthopedy.css
-│ └── assets/
-├── oncology/
-│ ├── oncology.html
-│ ├── oncology.css
-│ └── assets/
-├── hepatology/
-│ ├── hepatology.html
-│ ├── hepatology.css
-│ └── assets/
-└── infection/
-├── infection.html
-├── infection.css
-└── assets/
+├── cardiology/ (cardiology.html, cardiology.css, assets/)
+├── orthopedy/ (orthopedy.html, orthopedy.css, assets/)
+├── oncology/ (oncology.html, oncology.css, assets/)
+├── hepatology/ (hepatology.html, hepatology.css, assets/)
+└── infection/ (infection.html, infection.css, assets/)
