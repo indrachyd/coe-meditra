@@ -23,7 +23,7 @@ body {
   position: relative;
   height: 300px;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
-    url("assets/doctor_oncology.jpg");
+    url("../assets/images/doctor_hepatology.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -61,8 +61,8 @@ body {
   font-size: 18px;
 }
 
-/* Oncology Icon */
-.oncology-icon {
+/* Hepatology Icon */
+.hepatology-icon {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -77,7 +77,7 @@ body {
   z-index: 10;
 }
 
-.oncology-icon img {
+.hepatology-icon img {
   width: 40px;
   height: 40px;
   object-fit: contain;
@@ -109,6 +109,10 @@ body {
   margin-bottom: 0;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   line-height: 1.1;
+}
+
+.coe-title:last-of-type {
+  margin-bottom: 0;
 }
 
 /* Main Content */
@@ -176,16 +180,8 @@ body {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 20px;
-  color: #1f2937;
-  flex: 1;
-}
-
-.numbering-accordion-title {
-  font-family: "Raleway", sans-serif;
-  font-weight: 600;
-  font-size: 16px;
   color: #333;
-  line-height: 1.4;
+  flex: 1;
 }
 
 .accordion-icon {
@@ -205,66 +201,56 @@ body {
   max-height: 2000px;
 }
 
-.section-description {
+/* Service Section */
+.service-section {
+  margin-bottom: 25px;
+}
+
+.service-section h4 {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.service-section p {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  font-size: 16px;
-  color: #1f2937;
-  margin-bottom: 15px;
-  line-height: 1.6;
-}
-
-/* Numbered Service List */
-.numbered-service-list {
-  font-family: "Raleway", sans-serif;
-  list-style: none;
-  padding: 0 0 20px 0;
-  margin: 0;
-  counter-reset: service-counter;
-}
-
-.numbered-service-list li {
-  font-family: "Raleway", sans-serif;
-  padding: 8px 0;
   font-size: 14px;
   color: #666;
-  position: relative;
-  padding-left: 30px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   line-height: 1.5;
 }
 
-.numbered-service-list li::before {
-  counter-increment: service-counter;
-  content: counter(service-counter) ".";
-  color: #007bff;
-  font-weight: bold;
-  position: absolute;
-  left: 0;
-  top: 8px;
+/* Service List */
+.service-list {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  padding: 0 0 10px 0;
+  margin: 0;
+  list-style-type: none;
 }
 
-.sub-service-list {
-  list-style: none;
-  margin-top: 8px;
-  padding-left: 20px;
-  counter-reset: sub-counter;
-}
-
-.sub-service-list li {
+.service-list li {
   padding: 4px 0;
-  font-size: 13px;
-  color: #777;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+  line-height: 1.5;
   position: relative;
   padding-left: 15px;
 }
 
-.sub-service-list li::before {
-  counter-increment: sub-counter;
+.service-list li::before {
   content: "•";
   color: #007bff;
   position: absolute;
   left: 0;
+}
+
+.service-list li strong {
+  color: #333;
 }
 
 /* Active state styling */
@@ -301,12 +287,12 @@ html {
     font-size: 28px;
   }
 
-  .oncology-icon {
+  .hepatology-icon {
     width: 50px;
     height: 50px;
   }
 
-  .oncology-icon img {
+  .hepatology-icon img {
     width: 35px;
     height: 35px;
   }
