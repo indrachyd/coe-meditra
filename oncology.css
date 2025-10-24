@@ -22,14 +22,23 @@ body {
 .hero-section {
   position: relative;
   height: 300px;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
-    url("../assets/images/doctor_orthopedy.jpg");
+  background: linear-gradient(
+      135deg,
+      rgba(36, 94, 128, 0.4),
+      rgba(36, 94, 128, 0.25)
+    ),
+    linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.25)),
+    url("assets/images/doctor_oncology.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
   padding: 20px;
+  box-shadow: 0 4px 20px rgba(36, 94, 128, 0.3),
+    /* Shadow blue teal */ 0 8px 40px rgba(36, 94, 128, 0.25),
+    /* Shadow blue teal medium */ 0 12px 60px rgba(36, 94, 128, 0.2),
+    /* Shadow blue teal dark */ 0 0 0 1px rgba(36, 94, 128, 0.1); /* Border glow */
 }
 
 /* Back Button */
@@ -49,6 +58,7 @@ body {
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
   z-index: 10;
+  box-shadow: 0 0 20px rgba(36, 94, 128, 0.3), 0 0 40px rgba(36, 94, 128, 0.2);
 }
 
 .back-button:hover {
@@ -61,8 +71,8 @@ body {
   font-size: 18px;
 }
 
-/* Orthopedic Icon */
-.orthopedic-icon {
+/* Oncology Icon */
+.oncology-icon {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -77,7 +87,7 @@ body {
   z-index: 10;
 }
 
-.orthopedic-icon img {
+.oncology-icon img {
   width: 40px;
   height: 40px;
   object-fit: contain;
@@ -119,21 +129,30 @@ body {
   border-radius: 20px 20px 0 0;
   position: relative;
   z-index: 3;
+  overflow: hidden;
 }
 
-/* Introduction */
-.introduction {
-  margin-bottom: 30px;
+/* Leaf Background Decoration */
+.main-content::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 350px;
+  height: 350px;
+  background-image: url("assets/images/leaf.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  opacity: 2;
+  z-index: 0;
+  pointer-events: none;
 }
 
-.intro-title {
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
-  font-size: 20px;
-  display: block;
-  margin-bottom: 15px;
-  color: #333;
-  line-height: 1.4;
+.introduction,
+.services-accordion {
+  position: relative;
+  z-index: 1;
 }
 
 .intro-text {
@@ -176,9 +195,11 @@ body {
 }
 
 .accordion-header:hover {
-  background-color: rgba(0, 123, 255, 0.05);
+  background-color: #ffffff;
   margin: 0 -20px;
-  padding: 20px;
+  padding: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-radius: 8px;
 }
 
@@ -188,6 +209,14 @@ body {
   font-size: 20px;
   color: #1f2937;
   flex: 1;
+}
+
+.numbering-accordion-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.4;
 }
 
 .accordion-icon {
@@ -211,7 +240,7 @@ body {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  color: #555;
+  color: #1f2937;
   margin-bottom: 15px;
   line-height: 1.6;
 }
@@ -227,7 +256,6 @@ body {
 
 .numbered-service-list li {
   font-family: "Raleway", sans-serif;
-  font-weight: 400;
   padding: 8px 0;
   font-size: 14px;
   color: #666;
@@ -240,19 +268,11 @@ body {
 .numbered-service-list li::before {
   counter-increment: service-counter;
   content: counter(service-counter) ".";
-  color: #007bff;
+  color: #000000;
   font-weight: bold;
   position: absolute;
   left: 0;
   top: 8px;
-}
-
-.numbering-accordion-title {
-  font-family: "Raleway", sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  color: #333;
-  line-height: 1.4;
 }
 
 .sub-service-list {
@@ -263,7 +283,6 @@ body {
 }
 
 .sub-service-list li {
-  font-family: "Raleway", sans-serif;
   padding: 4px 0;
   font-size: 13px;
   color: #777;
@@ -281,14 +300,17 @@ body {
 
 /* Active state styling */
 .accordion-item.active .accordion-header {
-  background-color: rgba(0, 123, 255, 0.05);
-  margin: 0 -20px;
-  padding: 20px;
+  background-color: #ffffff;
+  
+  padding: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-radius: 8px;
 }
 
 .accordion-item.active .service-title {
-  color: #007bff;
+  color: #000000;
+  background-color: #ffffff;
 }
 
 /* Touch-friendly improvements */
@@ -313,12 +335,12 @@ html {
     font-size: 28px;
   }
 
-  .orthopedic-icon {
+  .oncology-icon {
     width: 50px;
     height: 50px;
   }
 
-  .orthopedic-icon img {
+  .oncology-icon img {
     width: 35px;
     height: 35px;
   }
