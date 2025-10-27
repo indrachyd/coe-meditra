@@ -32,7 +32,8 @@
           <!-- Hero Content -->
           <div class="hero-content">
             <p class="coe-label">Center of Excellence</p>
-            <h1 class="coe-title">Cardiology</h1>
+            <p class="coe-title" id="ceo-title-en">Cardiology</p>
+            <p class="coe-title" id="ceo-title-id" style="display: none;">Kardiologi</p>
           </div>
         </div>
       </header>
@@ -41,7 +42,7 @@
       <main class="main-content">
         <!-- Introduction -->
         <section class="introduction">
-          <p class="intro-text">
+          <p class="intro-text" id="intro-text-en">
             As a comprehensive healthcare center specializing in adult
             cardiovascular care, the Cardiology Center of Medistra Hospital
             offers a full range of services to treat various cardiac conditions,
@@ -52,24 +53,42 @@
             state-of-the-art medical technology and a strong commitment to
             patient safety and comfort.
           </p>
+          <p class="intro-text" id="intro-text-id" style="display: none">
+            Sebagai pusat layanan kesehatan komprehensif yang berspesialisasi
+            dalam perawatan jantung dan pembuluh darah, Pusat Kardiovaskular di
+            Medistra Hospital menawarkan layanan lengkap untuk menangani
+            berbagai kondisi kardiovaskular, mulai dari pemeriksaan diagnostik
+            dan prosedur intervensi, hingga bedah dan rehabilitasi jantung.
+            <br />
+            Fasilitas ini didukung oleh tim dokter spesialis jantung
+            berpengalaman, teknologi medis mutakhir, serta komitmen kuat
+            terhadap keselamatan dan kenyamanan pasien.
+          </p>
         </section>
 
         <!-- Services Accordion -->
         <section class="services-accordion">
           <div class="accordion-item active">
             <div class="accordion-header">
-              <span class="service-title">Diagnostic & Screening Services</span>
+              <span class="service-title" id="accordion-title-1-en">Diagnostic & Screening Services</span>
+              <span class="service-title" id="accordion-title-1-id" style="display: none;">Layanan Diagnostik & Skrining</span>
               <i class="fas fa-chevron-down accordion-icon"></i>
             </div>
             <div class="accordion-content active">
-              <p class="section-description">
+              <p class="section-description" id="desc-1-en">
                 Our cardiology department offers a complete range of diagnostic
                 tools to detect and monitor heart conditions:
               </p>
+              <p class="section-description" id="desc-1-id" style="display: none;">
+                Departemen kardiologi kami menyediakan berbagai alat diagnostik lengkap untuk mendeteksi dan memantau kondisi jantung:
+              </p>
               <ul class="service-list">
-                <li>Electrocardiography (ECG)</li>
-                <li>Holter monitoring (1, 3, and 7 days)</li>
-                <li>24-hour Ambulatory Blood Pressure Monitoring</li>
+                <li id="item-1-en">Electrocardiography (ECG)</li>
+                <li id="item-1-id" style="display: none;">Elektrokardiografi (EKG)</li>
+                <li id="item-2-en">Holter monitoring (1, 3, and 7 days)</li>
+                <li id="item-2-id" style="display: none;">Holter monitoring (1, 3, dan 7 hari)</li>
+                <li id="item-3-en">24-hour Ambulatory Blood Pressure Monitoring</li>
+                <li id="item-3-id" style="display: none;">Ambulatory Blood Pressure Monitoring 24 jam</li>
                 <li>Ankle Brachial Index</li>
                 <li>Treadmill Stress Test</li>
                 <li>Transthoracic Echocardiography (TTE)</li>
@@ -86,18 +105,23 @@
 
           <div class="accordion-item active">
             <div class="accordion-header">
-              <span class="service-title">Diagnosis & Treatment</span>
+              <span class="service-title" id="accordion-title-2-en">Diagnosis & Treatment</span>
+              <span class="service-title" id="accordion-title-2-id" style="display: none;">Diagnosis & Pengobatan</span>
               <i class="fas fa-chevron-down accordion-icon"></i>
             </div>
             <div class="accordion-content active">
-              <p class="section-description">
+              <p class="section-description" id="desc-2-en">
                 Medistra Hospital is equipped with the latest medical
                 technologies to support accurate diagnosis and effective
                 treatment.
               </p>
+              <p class="section-description" id="desc-2-id" style="display: none;">
+                Rumah Sakit Medistra dilengkapi dengan teknologi medis terkini untuk mendukung diagnosis yang akurat dan pengobatan yang efektif.
+              </p>
 
               <div class="treatment-section">
-                <h4>Treatment Room</h4>
+                <h4 id="treatment-room-en">Treatment Room</h4>
+                <h4 id="treatment-room-id" style="display: none;">Ruang Pengobatan</h4>
                 <div class="image-container">
                   <img
                     src="assets/images/doctor_cardiology.jpg"
@@ -105,15 +129,19 @@
                     class="treatment-image"
                   />
                 </div>
-                <p class="image-description">
+                <p class="image-description" id="desc-troom-en">
                   Our procedure rooms are fitted with modern equipment to
                   support doctors in performing necessary interventions to aid
                   patient recovery.
                 </p>
+                <p class="image-description" id="desc-troom-id" style="display: none;">
+                  Ruangan prosedur kami dilengkapi dengan peralatan modern untuk mendukung dokter dalam melakukan intervensi yang diperlukan guna membantu pemulihan pasien.
+                </p>
               </div>
 
               <div class="treatment-section">
-                <h4>Stress Test</h4>
+                <h4 id="stress-test-en">Stress Test</h4>
+                <h4 id="stress-test-id" style="display: none;">Stress Test</h4>
                 <div class="image-container">
                   <img
                     src="assets/images/stress-test-machine.png"
@@ -121,11 +149,14 @@
                     class="treatment-image"
                   />
                 </div>
-                <p class="image-description">
+                <p class="image-description" id="desc-stress-en">
                   A stress test is used to detect heart problems that may occur
                   only during physical activity. During the test, patients walk
                   on a treadmill at increasing speeds while their ECG, blood
                   pressure, and heart rate are closely monitored.
+                </p>
+                <p class="image-description" id="desc-stress-id" style="display: none;">
+                  Stress test digunakan untuk mendeteksi masalah jantung yang mungkin hanya terjadi selama aktivitas fisik. Selama tes, pasien berjalan di atas treadmill dengan kecepatan yang terus meningkat, sementara EKG, tekanan darah, dan detak jantung mereka dipantau secara ketat.
                 </p>
               </div>
             </div>
@@ -133,30 +164,38 @@
 
           <div class="accordion-item">
             <div class="accordion-header">
-              <span class="service-title"
-                >Cardiac Medical & Surgical Services</span
-              >
+              <span class="service-title" id="accordion-title-3-en">Cardiac Medical & Surgical Services</span>
+              <span class="service-title" id="accordion-title-3-id" style="display: none;">Layanan Medis & Bedah Jantung</span>
               <i class="fas fa-chevron-down accordion-icon"></i>
             </div>
             <div class="accordion-content">
               <ul class="service-list">
-                <strong>Coronary Heart Disease</strong>
+                <strong id="chd-title-en">Coronary Heart Disease</strong>
+                <strong id="chd-title-id" style="display: none;">Penyakit Jantung Koroner</strong>
                 <ul class="sub-service-list">
-                  <li>Coronary Angiography</li>
-                  <li>
+                  <li id="cor-angio-en">Coronary Angiography</li>
+                  <li id="cor-angio-id" style="display: none;">Angiografi Koroner</li>
+                  <li id="pci-stent-en">
                     Percutaneous Coronary Intervention (stent placement) using
                     Drug-Eluting Stents (DES) and novel bioresorbable stents
                     (DynamX)
                   </li>
-                  <li>
+                  <li id="pci-stent-id" style="display: none;">
+                    Intervensi Koroner Perkutan (PCI) menggunakan Stent Dilapisi Obat (Drug-Eluting Stents/DES) dan stent bioresorbable terbaru (DynamX).
+                  </li>
+                  <li id="pci-advanced-en">
                     Advanced PCI using technologies such as Intravascular
                     Ultrasound (IVUS), Optical Coherence Tomography (OCT),
                     Rotablator, Orbital Atherectomy System (OAS), and
                     Intravascular Lithotripsy (IVL)
                   </li>
+                  <li id="pci-advanced-id" style="display: none;">
+                    PCI Lanjutan menggunakan teknologi seperti Intravascular Ultrasound (IVUS), Optical Coherence Tomography (OCT), Rotablator, Orbital Atherectomy System (OAS), dan Intravascular Lithotripsy (IVL).
+                  </li>
                 </ul>
                 <br />
-                <strong>Heart Rhythm Disorders (Arrhythmia)</strong>
+                <strong id="heart-rhythm-en">Heart Rhythm Disorders (Arrhythmia)</strong>
+                <strong id="heart-rhythm-id" style="display: none;">Gangguan Irama Jantung (Aritmia)</strong>
                 <ul class="sub-service-list">
                   <li>Electrophysiology Studies</li>
                   <li>Radiofrequency Ablation</li>
@@ -167,62 +206,87 @@
                 </ul>
                 <br />
 
-                <strong>Heart Surgery</strong>
+                <strong id="heart-surgery-en">Heart Surgery</strong>
+                <strong id="heart-surgery-id" style="display: none;">Bedah Jantung</strong>
                 <ul class="sub-service-list">
                   <li>Coronary Artery Bypass Grafting (CABG)</li>
-                  <li>Conventional or minimally invasive valve surgery</li>
-                  <li>Thoracic aortic aneurysm repair (TEVAR/EVAR)</li>
+                  <li id="valve-surgery-en">Conventional or minimally invasive valve surgery</li>
+                  <li id="valve-surgery-id" style="display: none;">Bedah Katup Konvensional atau Invasif Minimal</li>
+                  <li id="aneurysm-repair-en">Thoracic aortic aneurysm repair (TEVAR/EVAR)</li>
+                  <li id="aneurysm-repair-id" style="display: none;">Perbaikan Aneurisma Aorta Toraks (TEVAR/EVAR)</li>
                 </ul>
 
                 <br />
 
-                <strong>Heart Valve Disorders</strong>
+                <strong id="heart-valve-en">Heart Valve Disorders</strong>
+                <strong id="heart-valve-id" style="display: none;">Gangguan Katup Jantung</strong>
                 <ul class="sub-service-list">
-                  <li>
+                  <li id="tavi-en">
                     TAVI (Transcatheter Aortic Valve Implantation)A non-surgical
                     procedure to replace narrowed aortic valves using
                     catheterization
                   </li>
-                  <li>
+                  <li id="tavi-id" style="display: none;">
+                    TAVI (Transcatheter Aortic Valve Implantation): Prosedur non-bedah untuk mengganti katup aorta yang menyempit menggunakan kateterisasi.
+                  </li>
+                  <li id="tricvalve-en">
                     TricValve. A non-surgical procedure for placing bicaval
                     valves in the superior and inferior vena cava
                   </li>
-                  <li>
+                  <li id="tricvalve-id" style="display: none;">
+                    TricValve: Prosedur non-bedah untuk memasang katup bikaval di vena kava superior dan inferior.
+                  </li>
+                  <li id="mitral-clip-en">
                     Mitral Clip. A non-surgical procedure to repair mitral valve
                     leakage using a special device via catheter
                   </li>
-                  <li>
+                  <li id="mitral-clip-id" style="display: none;">
+                    MitraClip: Prosedur non-bedah untuk memperbaiki kebocoran katup mitral menggunakan alat khusus melalui kateter.
+                  </li>
+                  <li id="tricuspid-clip-en">
                     Tricuspid Clip. A non-surgical procedure to repair tricuspid
                     valve leakage via catheterization
+                  </li>
+                  <li id="tricuspid-clip-id" style="display: none;">
+                    Tricuspid Clip: Prosedur non-bedah untuk memperbaiki kebocoran katup trikuspid melalui kateterisasi.
                   </li>
                 </ul>
 
                 <br />
-                <strong>LAA Closure</strong>
-                <p class="image-description">
+                <strong id="laa-closure-en">LAA Closure</strong>
+                <strong id="laa-closure-id" style="display: none;">Penutupan LAA (Left Atrial Appendage)</strong>
+                <p class="image-description" id="desc-laa-en">
                   A procedure to close the left atrial appendage, especially for
                   atrial fibrillation patients at high risk of stroke.
                 </p>
+                <p class="image-description" id="desc-laa-id" style="display: none;">
+                  Prosedur untuk menutup apendiks atrium kiri, terutama untuk pasien fibrilasi atrium yang berisiko tinggi terkena stroke.
+                </p>
 
                 <br />
-                <strong
-                  >CRTD (Cardiac Resynchronization Therapy
-                  Defibrillator)</strong
-                >
-                <p class="image-description">
+                <strong id="crtd-title-en">CRTD (Cardiac Resynchronization Therapy Defibrillator)</strong>
+                <strong id="crtd-title-id" style="display: none;">CRTD (Cardiac Resynchronization Therapy Defibrillator)</strong>
+                <p class="image-description" id="desc-crtd-en">
                   An implantable device for heart failure patients at high risk
                   of sudden cardiac death. This device works as a biventricular
                   pacemaker and provides shocks during rapid heartbeats or
                   ventricular fibrillation.
                 </p>
+                <p class="image-description" id="desc-crtd-id" style="display: none;">
+                  Alat implan untuk pasien gagal jantung dengan risiko tinggi kematian jantung mendadak. Alat ini berfungsi sebagai pacemaker biventricular dan memberikan kejut listrik selama detak jantung cepat atau fibrilasi ventrikel.
+                </p>
 
                 <br />
-                <strong>Cardiac Rehabilitation</strong>
-                <p class="image-description">
+                <strong id="cardiac-rehab-title-en">Cardiac Rehabilitation</strong>
+                <strong id="cardiac-rehab-title-id" style="display: none;">Rehabilitasi Jantung</strong>
+                <p class="image-description" id="desc-rehab-en">
                   An implantable device for heart failure patients at high risk
                   of sudden cardiac death. This device works as a biventricular
                   pacemaker and provides shocks during rapid heartbeats or
                   ventricular fibrillation.
+                </p>
+                <p class="image-description" id="desc-rehab-id" style="display: none;">
+                  Program latihan terawasi untuk pasien setelah intervensi koroner atau bedah jantung, bertujuan membantu pemulihan aktivitas sehari-hari, meningkatkan kualitas hidup, dan mencegah kekambuhan atau kejadian jantung fatal.
                 </p>
               </ul>
             </div>
@@ -230,32 +294,36 @@
 
           <div class="accordion-item">
             <div class="accordion-header">
-              <span class="service-title"
-                >24-Hour Cardiac Emergency Services</span
-              >
+              <span class="service-title" id="accordion-title-4-en">24-Hour Cardiac Emergency Services</span>
+              <span class="service-title" id="accordion-title-4-id" style="display: none;">Layanan Kegawatdaruratan Jantung 24 Jam</span>
               <i class="fas fa-chevron-down accordion-icon"></i>
             </div>
             <div class="accordion-content">
-              <p class="image-description">
-                Medistra Hospital offers 24/7 Cardiac Emergency Services with
+              <p class="image-description" id="desc-emergency-en">
+                Medistra Hospital offers 24/7 Cardiac Emergency Services with
                 international standards, including Primary PCI (Percutaneous
-                Coronary Intervention) to treat heart attacks in under 90
+                Coronary Intervention) to treat heart attacks in under 90
                 minutes (door-to-balloon time).
+              </p>
+              <p class="image-description" id="desc-emergency-id" style="display: none;">
+                Layanan Cardiac Emergency RS Medistra siap 24 jam setiap hari, dilengkapi dengan prosedur Primary PCI untuk menangani serangan jantung akut dalam waktu kurang dari 90 menit (door-to-balloon time), sesuai standar internasional.
               </p>
             </div>
           </div>
 
           <div class="accordion-item">
             <div class="accordion-header">
-              <span class="service-title"
-                >Multispecialty Cardiologist Team</span
-              >
+              <span class="service-title" id="accordion-title-5-en">Multispecialty Cardiologist Team</span>
+              <span class="service-title" id="accordion-title-5-id" style="display: none;">Tim Dokter Jantung Multi-Spesialisasi</span>
               <i class="fas fa-chevron-down accordion-icon"></i>
             </div>
             <div class="accordion-content">
-              <p class="image-description">
+              <p class="image-description" id="desc-team-en">
                 Our medical team consists of highly qualified cardiologists with
                 various subspecialties, including:
+              </p>
+              <p class="image-description" id="desc-team-id" style="display: none;">
+                Tim medis kami terdiri dari para profesor dan dokter spesialis jantung yang memiliki kualifikasi tinggi serta berbagai subspesialisasi di bidang kardiologi. Setiap dokter memiliki pengalaman klinis dan keahlian di bidangnya masing-masing.
               </p>
               <ul class="service-list">
                 <li>Interventional Cardiology</li>
@@ -270,27 +338,44 @@
 
           <div class="accordion-item">
             <div class="accordion-header">
-              <span class="service-title">Modern Facilities</span>
+              <span class="service-title" id="accordion-title-6-en">Modern Facilities</span>
+              <span class="service-title" id="accordion-title-6-id" style="display: none;">Fasilitas Modern</span>
               <i class="fas fa-chevron-down accordion-icon"></i>
             </div>
             <div class="accordion-content">
               <ul class="service-list">
-                <li>Cath Lab (Catheterization Laboratory)</li>
-                <li>Intensive Cardiac Care Unit (ICCU)</li>
-                <li>Temporary & Permanent Pacemakers</li>
-                <li>Intravascular Ultrasound (IVUS)</li>
-                <li>Optical Coherence Tomography (OCT)</li>
-                <li>Rotablator</li>
-                <li>Orbital Atherectomy System (OAS)</li>
-                <li>Intravascular Lithotripsy (IVL)</li>
-                <li>Resting Fractional Flow Reserve (RFR)</li>
-                <li>Fractional Flow Reserve (FFR)</li>
-                <li>Instantaneous Wave-Free Ratio (iFR)</li>
-                <li>Quantitative Flow Ratio (QFR)</li>
-                <li>Intra-Aortic Balloon Pump (IABP)</li>
-                <li>Cardiac MRI</li>
-                <li>Cardiac CT Scan & Coronary Angiography</li>
-                <li>Cardiac Genetic Testing (for diagnosis & screening)</li>
+                <li id="facility-1-en">Cath Lab (Catheterization Laboratory)</li>
+                <li id="facility-1-id" style="display: none;">Cath Lab (Laboratorium Kateterisasi)</li>
+                <li id="facility-2-en">Intensive Cardiac Care Unit (ICCU)</li>
+                <li id="facility-2-id" style="display: none;">Intensive Cardiovascular Care Unit (ICCU)</li>
+                <li id="facility-3-en">Temporary & Permanent Pacemakers</li>
+                <li id="facility-3-id" style="display: none;">Pacemakers Sementara & Permanen</li>
+                <li id="facility-4-en">Intravascular Ultrasound (IVUS)</li>
+                <li id="facility-4-id" style="display: none;">Intravascular Ultrasound (IVUS)</li>
+                <li id="facility-5-en">Optical Coherence Tomography (OCT)</li>
+                <li id="facility-5-id" style="display: none;">Optical Coherence Tomography (OCT)</li>
+                <li id="facility-6-en">Rotablator</li>
+                <li id="facility-6-id" style="display: none;">Rotablator</li>
+                <li id="facility-7-en">Orbital Atherectomy System (OAS)</li>
+                <li id="facility-7-id" style="display: none;">Orbital Atherectomy System (OAS)</li>
+                <li id="facility-8-en">Intravascular Lithotripsy (IVL)</li>
+                <li id="facility-8-id" style="display: none;">Intravascular Lithotripsy (IVL)</li>
+                <li id="facility-9-en">Resting Fractional Flow Reserve (RFR)</li>
+                <li id="facility-9-id" style="display: none;">Resting Fractional Flow Reserve (RFR)</li>
+                <li id="facility-10-en">Fractional Flow Reserve (FFR)</li>
+                <li id="facility-10-id" style="display: none;">Fractional Flow Reserve (FFR)</li>
+                <li id="facility-11-en">Instantaneous Wave-Free Ratio (iFR)</li>
+                <li id="facility-11-id" style="display: none;">Instantaneous Wave-Free Ratio (iFR)</li>
+                <li id="facility-12-en">Quantitative Flow Ratio (QFR)</li>
+                <li id="facility-12-id" style="display: none;">Quantitative Flow Ratio (QFR)</li>
+                <li id="facility-13-en">Intra-Aortic Balloon Pump (IABP)</li>
+                <li id="facility-13-id" style="display: none;">Intra-Aortic Balloon Pump (IABP)</li>
+                <li id="facility-14-en">Cardiac MRI</li>
+                <li id="facility-14-id" style="display: none;">MRI Jantung</li>
+                <li id="facility-15-en">Cardiac CT Scan & Coronary Angiography</li>
+                <li id="facility-15-id" style="display: none;">CT Scan Jantung & Angiografi Koroner</li>
+                <li id="facility-16-en">Cardiac Genetic Testing (for diagnosis & screening)</li>
+                <li id="facility-16-id" style="display: none;">Tes Genetik Jantung (diagnostik & skrining)</li>
               </ul>
             </div>
           </div>
@@ -299,6 +384,67 @@
     </div>
 
     <script>
+      // Language detection and switching
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get language from URL parameter or localStorage, default to 'en'
+        const urlParams = new URLSearchParams(window.location.search);
+        const lang =
+          urlParams.get("lang") ||
+          localStorage.getItem("selectedLanguage") ||
+          "en";
+
+        // Hide/show language content - Intro Text
+        const introTextEn = document.getElementById("intro-text-en");
+        const introTextId = document.getElementById("intro-text-id");
+        
+        // Hide/show language content - Title
+        const titleEn = document.getElementById("ceo-title-en");
+        const titleId = document.getElementById("ceo-title-id");
+
+        // Hide/show language content - Accordion Titles
+        const accordion1En = document.getElementById("accordion-title-1-en");
+        const accordion1Id = document.getElementById("accordion-title-1-id");
+        const accordion2En = document.getElementById("accordion-title-2-en");
+        const accordion2Id = document.getElementById("accordion-title-2-id");
+        const accordion3En = document.getElementById("accordion-title-3-en");
+        const accordion3Id = document.getElementById("accordion-title-3-id");
+        const accordion4En = document.getElementById("accordion-title-4-en");
+        const accordion4Id = document.getElementById("accordion-title-4-id");
+
+        // Get all language-specific elements
+        const elemsId = document.querySelectorAll('[id$="-id"]');
+        const elemsEn = document.querySelectorAll('[id$="-en"]');
+
+        if (lang === "id") {
+          // Show all Indonesian elements, hide all English elements
+          elemsEn.forEach(elem => elem.style.display = "none");
+          elemsId.forEach(elem => {
+            const tagName = elem.tagName.toLowerCase();
+            if (tagName === 'span') {
+              elem.style.display = "inline";
+            } else if (tagName === 'strong' || tagName === 'h4') {
+              elem.style.display = "block";
+            } else {
+              elem.style.display = "block";
+            }
+          });
+        } else {
+          // Show all English elements, hide all Indonesian elements
+          elemsId.forEach(elem => elem.style.display = "none");
+          elemsEn.forEach(elem => {
+            const tagName = elem.tagName.toLowerCase();
+            if (tagName === 'span') {
+              elem.style.display = "inline";
+            } else {
+              elem.style.display = "block";
+            }
+          });
+        }
+
+        // Store language preference
+        localStorage.setItem("selectedLanguage", lang);
+      });
+
       // Accordion functionality
       document.addEventListener("DOMContentLoaded", function () {
         const accordionItems = document.querySelectorAll(".accordion-item");
