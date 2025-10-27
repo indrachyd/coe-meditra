@@ -390,3 +390,116 @@ html {
         font-size: 14px;
     }
 }
+
+
+/* Desktop Styles - Keep mobile's style horizontally */
+@media (min-width: 768px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0f4f8 0%, #e0ecf3 100%);
+  }
+
+  .page-wrapper {
+    max-width: 500px;
+    width: 100%;
+    background: white;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+    min-height: 100vh;
+    position: relative;
+  }
+
+  /* Header adjustments */
+  .header {
+    width: 100%;
+  }
+
+  .hero-section {
+    height: 350px;
+    padding: 25px;
+    border-radius: 0;
+  }
+
+  .coe-title {
+    font-size: 40px;
+  }
+
+  .coe-label {
+    font-size: 18px;
+  }
+
+  /* Main content adjustments */
+  .main-content {
+    padding: 35px 25px;
+    border-radius: 25px 25px 0 0;
+    margin-top: -20px;
+  }
+
+  .intro-text {
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  .service-title {
+    font-size: 20px;
+  }
+
+  .accordion-header {
+    padding: 20px 0;
+  }
+
+  /* Adjust leaf decoration */
+  .main-content::after {
+    width: 350px;
+    height: 350px;
+  }
+
+  .back-button {
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    left: 20px;
+  }
+
+  .back-button i {
+    font-size: 18px;
+  }
+
+  .oncology-icon {
+    width: 60px;
+    height: 60px;
+    top: 20px;
+    right: 20px;
+  }
+
+  .oncology-icon img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .section-description {
+    font-size: 16px;
+  }
+
+  .numbered-service-list li {
+    font-size: 14px;
+    padding-left: 30px;
+  }
+
+  .numbering-accordion-title {
+    font-size: 16px;
+  }
+
+  .sub-service-list li {
+    font-size: 13px;
+  }
+}
+
+/* Smooth transition for window resize */
+@media (min-width: 768px) {
+  html {
+    transition: all 0.3s ease;
+  }
+}
