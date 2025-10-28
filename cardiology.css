@@ -319,6 +319,34 @@ body {
     background-color: #ffffff;
 }
 
+/* Doctor List Styling */
+.doctor-list {
+  margin: 20px 0;
+}
+
+.doctor-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px 0;
+}
+
+.doctor-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.doctor-name {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+}
+
 /* Touch-friendly improvements */
 .accordion-header {
     -webkit-tap-highlight-color: transparent;
