@@ -131,6 +131,30 @@ body {
   border-radius: 20px 20px 0 0;
   position: relative;
   z-index: 3;
+  overflow: hidden;
+}
+
+/* Leaf Background Decoration */
+.main-content::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 350px;
+    height: 350px;
+    background-image: url("assets/images/leaf.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    opacity: 2;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.introduction,
+.services-accordion {
+  position: relative;
+  z-index: 1;
 }
 
 /* Introduction */
@@ -189,7 +213,6 @@ body {
 
 .accordion-header:hover {
   background-color: #ffffff;
-  margin: 0 -20px;
   padding: 0px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -262,6 +285,17 @@ body {
   font-size: 16px;
   color: #333;
   line-height: 1.4;
+  display: inline-block;
+}
+
+.numbered-service-list span {
+  display: block;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  margin-top: 4px;
 }
 
 .sub-service-list {
@@ -286,6 +320,37 @@ body {
   color: #007bff;
   position: absolute;
   left: 0;
+}
+
+/* Doctor List Styling */
+.doctor-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.doctor-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px 0;
+}
+
+.doctor-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.doctor-name {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.4;
 }
 
 /* Active state styling */
@@ -438,6 +503,11 @@ html {
   .main-content::after {
     width: 350px;
     height: 350px;
+    background-image: url("assets/images/leaf.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    opacity: 2;
   }
 
   .back-button {
