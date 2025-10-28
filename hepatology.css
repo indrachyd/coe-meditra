@@ -304,6 +304,54 @@ body {
   background-color: #ffffff;
 }
 
+/* Section Description */
+.section-description {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Doctor List Styling */
+.doctor-list {
+  margin: 20px 0;
+}
+
+.doctor-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px 0;
+}
+
+.doctor-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.doctor-name {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Team Subtitle Styling */
+.team-subtitle {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
 /* Touch-friendly improvements */
 .accordion-header {
   -webkit-tap-highlight-color: transparent;

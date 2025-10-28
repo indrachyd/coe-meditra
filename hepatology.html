@@ -32,8 +32,8 @@
           <!-- Hero Content -->
           <div class="hero-content">
             <p class="coe-label">Center of Excellence</p>
-            <h1 class="coe-title">Gastroentero</h1>
-            <h1 class="coe-title">Hepatology</h1>
+            <h1 class="coe-title" id="title-en">Gastroentero <br> Hepatology</h1>
+            <h1 class="coe-title" id="title-id" style="display: none;">Gastroentero <br> Hepatologi</h1>
           </div>
         </div>
       </header>
@@ -42,14 +42,20 @@
       <main class="main-content">
         <!-- Introduction -->
         <section class="introduction">
-          <p class="intro-text">
+          <p class="intro-text" id="intro-1-en">
             Medistra Digestive Disease & GI Oncology Center offers comprehensive
             services for the evaluation and management of gastrointestinal
             disorders, including motility and GERD-related conditions.
           </p>
-          <p class="intro-text">
+          <p class="intro-text" id="intro-1-id" style="display: none;">
+            Pusat Penyakit Pencernaan & Onkologi GI Medistra menyediakan layanan menyeluruh untuk evaluasi dan penanganan berbagai gangguan saluran cerna, termasuk gangguan motilitas dan kondisi yang berkaitan dengan GERD.
+          </p>
+          <p class="intro-text" id="intro-2-en">
             Our center is also well-established in the fields of Advanced
             Imaging, Gastrointestinal Oncology, and Liver Diseases.
+          </p>
+          <p class="intro-text" id="intro-2-id" style="display: none;">
+            Pusat ini juga memiliki layanan unggulan dalam bidang Pencitraan Medis Lanjutan, Onkologi Saluran Cerna, dan Penyakit Hati.
           </p>
         </section>
 
@@ -57,95 +63,137 @@
         <section class="services-accordion">
           <div class="accordion-item active">
             <div class="accordion-header">
-              <span class="service-title">Range of Service</span>
+              <span class="service-title" id="accordion-1-title-en">Range of Service</span>
+              <span class="service-title" id="accordion-1-title-id" style="display: none;">Jenis Layanan</span>
               <i class="fas fa-chevron-up accordion-icon"></i>
             </div>
             <div class="accordion-content active">
               <div class="service-section">
-                <h4>Endoscopic Procedures</h4>
-                <p>
+                <h4 id="endoscopic-title-en">Endoscopic Procedures</h4>
+                <h4 id="endoscopic-title-id" style="display: none;">Prosedur Endoskopi</h4>
+                <p id="endoscopic-desc-en">
                   We offer a full spectrum of diagnostic and therapeutic
                   endoscopic procedures, including:
                 </p>
+                <p id="endoscopic-desc-id" style="display: none;">
+                  Kami menyediakan berbagai layanan endoskopi diagnostik dan terapeutik, meliputi:
+                </p>
                 <ul class="service-list">
-                  <li>Gastroscopy</li>
-                  <li>Colonoscopy</li>
-                  <li>Rectoscopy</li>
-                  <li>Capsule Endoscopy</li>
-                  <li>Enteroscopy</li>
+                  <li id="gastro-en">Gastroscopy</li>
+                  <li id="gastro-id" style="display: none;">Gastroskopi</li>
+                  <li id="colon-en">Colonoscopy</li>
+                  <li id="colon-id" style="display: none;">Kolonoskopi</li>
+                  <li id="recto-en">Rectoscopy</li>
+                  <li id="recto-id" style="display: none;">Rektoskopi</li>
+                  <li id="capsule-en">Capsule Endoscopy</li>
+                  <li id="capsule-id" style="display: none;">Endoskopi Kapsul</li>
+                  <li id="entero-en">Enteroscopy</li>
+                  <li id="entero-id" style="display: none;">Enteroskopi</li>
                 </ul>
               </div>
 
               <div class="service-section">
                 <h4>ERCP (Endoscopic Retrograde Cholangiopancreatography)</h4>
-                <p>
+                <p id="ercp-desc-en">
                   A specialized procedure that combines endoscopy and X-ray
                   imaging to diagnose and treat conditions in the bile ducts and
                   pancreatic ducts.
                 </p>
+                <p id="ercp-desc-id" style="display: none;">
+                  Merupakan prosedur khusus yang menggabungkan teknik endoskopi dan pencitraan sinar-X untuk mendiagnosis dan mengobati gangguan pada saluran empedu dan pankreas.
+                </p>
               </div>
 
               <div class="service-section">
-                <h4>Advanced Diagnostic and Therapeutic Endoscopy</h4>
-                <p>Our services include:</p>
+                <h4 id="advanced-endoscopic-title-en">Advanced Diagnostic and Therapeutic Endoscopy</h4>
+                <h4 id="advanced-endoscopic-title-id" style="display: none;">Endoskopi Diagnostik dan Terapeutik Lanjutan</h4>
+                <p id="advanced-include-en">Our services include:</p>
+                <p id="advanced-include-id" style="display: none;">Layanan kami mencakup:</p>
                 <ul class="service-list">
-                  <li>Placement of enteral and biliary stents</li>
-                  <li>Management of esophageal varices</li>
-                  <li>Small bowel enteroscopy</li>
-                  <li>Endoscopic treatments for gastrointestinal bleeding</li>
-                  <li>Endoscopic ultrasound (EUS)</li>
+                  <li id="stent-en">Placement of enteral and biliary stents</li>
+                  <li id="stent-id" style="display: none;">Pemasangan stent enteral dan empedu</li>
+                  <li id="varices-en">Management of esophageal varices</li>
+                  <li id="varices-id" style="display: none;">Penanganan varises esofagus</li>
+                  <li id="bowel-en">Small bowel enteroscopy</li>
+                  <li id="bowel-id" style="display: none;">Enteroskopi usus halus</li>
+                  <li id="bleeding-en">Endoscopic treatments for gastrointestinal bleeding</li>
+                  <li id="bleeding-id" style="display: none;">Terapi endoskopi untuk perdarahan saluran cerna</li>
+                  <li id="eus-en">Endoscopic ultrasound (EUS)</li>
+                  <li id="eus-id" style="display: none;">Ultrasonografi Endoskopi (EUS)</li>
                 </ul>
               </div>
 
               <div class="service-section">
                 <h4>Endoscopic Sleeve Gastroplasty</h4>
-                <p>
+                <p id="sleeve-desc-en">
                   A minimally invasive weight-loss procedure. Unlike
                   conventional surgery, this technique uses an endoscope to
                   suture the stomach, eliminating the need for incisions and
                   minimizing the risk of complications. It enables patients to
                   return to normal activities more quickly.
                 </p>
+                <p id="sleeve-desc-id" style="display: none;">
+                  Merupakan prosedur penurunan berat badan yang minimal invasif. Tidak memerlukan sayatan karena lambung dijahit dari dalam menggunakan endoskopi. Risiko komplikasi lebih rendah dan pasien dapat segera kembali ke aktivitas normal.
+                </p>
               </div>
 
               <div class="service-section">
-                <h4>Intragastric Balloon</h4>
-                <p>
+                <h4 id="balloon-title-en">Intragastric Balloon</h4>
+                <h4 id="balloon-title-id" style="display: none;">Balon Intragastrik</h4>
+                <p id="balloon-desc-en">
                   A non-surgical weight-loss method that involves placing a
                   special balloon inside the stomach to help reduce appetite.
                 </p>
-              </div>
-
-              <div class="service-section">
-                <h4>Bariatric Surgery</h4>
-                <p>
-                  A surgical intervention designed to support significant weight
-                  loss by modifying the digestive system.
+                <p id="balloon-desc-id" style="display: none;">
+                  Metode penurunan berat badan tanpa operasi, di mana balon khusus dimasukkan ke dalam lambung untuk membantu mengontrol nafsu makan.
                 </p>
               </div>
 
               <div class="service-section">
-                <h4>Hepatobiliary Disease Diagnosis and Treatment</h4>
-                <p>
+                <h4 id="bariatric-title-en">Bariatric Surgery</h4>
+                <h4 id="bariatric-title-id" style="display: none;">Bedah Bariatrik</h4>
+                <p id="bariatric-desc-en">
+                  A surgical intervention designed to support significant weight
+                  loss by modifying the digestive system.
+                </p>
+                <p id="bariatric-desc-id" style="display: none;">
+                  Prosedur medis untuk membantu menurunkan berat badan melalui perubahan pada sistem pencernaan.
+                </p>
+              </div>
+
+              <div class="service-section">
+                <h4 id="hepatobiliary-title-en">Hepatobiliary Disease Diagnosis and Treatment</h4>
+                <h4 id="hepatobiliary-title-id" style="display: none;">Diagnosis dan Penanganan Penyakit Hepatobilier</h4>
+                <p id="hepatobiliary-desc-en">
                   Includes procedures such as liver biopsy and pancreatic biopsy
                   for diagnosing and managing liver and pancreatic conditions.
+                </p>
+                <p id="hepatobiliary-desc-id" style="display: none;">
+                  Termasuk prosedur seperti biopsi hati dan biopsi pankreas untuk mendiagnosis dan menangani gangguan hati serta pankreas.
                 </p>
               </div>
 
               <div class="service-section">
                 <h4>PEG (Percutaneous Endoscopic Gastrostomy)</h4>
-                <p>
+                <p id="peg-desc-en">
                   A procedure that places a feeding tube directly into the
                   stomach through the skin for patients who require long-term
                   nutritional support.
                 </p>
+                <p id="peg-desc-id" style="display: none;">
+                  Prosedur medis yang memungkinkan pemasangan selang makanan langsung ke lambung melalui kulit untuk pasien yang membutuhkan dukungan nutrisi jangka panjang.
+                </p>
               </div>
 
               <div class="service-section">
-                <h4>Non-Endoscopic Treatments</h4>
-                <p>
+                <h4 id="nonendoscopic-title-en">Non-Endoscopic Treatments</h4>
+                <h4 id="nonendoscopic-title-id" style="display: none;">Penanganan Non-Endoskopi</h4>
+                <p id="nonendoscopic-desc-en">
                   We also provide care for conditions such as hemorrhoids using
                   non-endoscopic techniques.
+                </p>
+                <p id="nonendoscopic-desc-id" style="display: none;">
+                  Kami juga menyediakan layanan penanganan kondisi seperti wasir dengan teknik non-endoskopi.
                 </p>
               </div>
             </div>
@@ -153,35 +201,81 @@
 
           <div class="accordion-item active">
             <div class="accordion-header">
-              <span class="service-title">Our Advantages</span>
+              <span class="service-title" id="accordion-2-title-en">Our Advantages</span>
+              <span class="service-title" id="accordion-2-title-id" style="display: none;">Keunggulan Kami</span>
               <i class="fas fa-chevron-up accordion-icon"></i>
             </div>
             <div class="accordion-content active">
               <ul class="service-list">
-                <li><strong>State-of-the-Art Tools and Technology</strong></li>
+                <li><strong id="tools-title-en">State-of-the-Art Tools and Technology</strong><strong id="tools-title-id" style="display: none;">Peralatan dan Teknologi Mutakhir</strong></li>
                 <li>
-                  <strong>Bariatric Surgery:</strong> Performed with modern
-                  techniques and tools to ensure safety and effectiveness.
+                  <strong id="bariatric-tech-label-en">Bariatric Surgery:</strong><strong id="bariatric-tech-label-id" style="display: none;">Bedah Bariatrik:</strong> 
+                  <span id="bariatric-tech-desc-en">Performed with modern techniques and tools to ensure safety and effectiveness.</span>
+                  <span id="bariatric-tech-desc-id" style="display: none;">Dilakukan dengan teknik terkini untuk menjamin keamanan dan efektivitas.</span>
                 </li>
                 <li>
-                  <strong>EUS (Endoscopic Ultrasound):</strong> Combines
-                  ultrasound and endoscopy to produce highly detailed images of
-                  internal organs, especially in and around the gastrointestinal
-                  tract.
+                  <strong id="eus-tech-label-en">EUS (Endoscopic Ultrasound):</strong><strong id="eus-tech-label-id" style="display: none;">EUS (Endoscopic Ultrasound):</strong> 
+                  <span id="eus-tech-desc-en">Combines ultrasound and endoscopy to produce highly detailed images of internal organs, especially in and around the gastrointestinal tract.</span>
+                  <span id="eus-tech-desc-id" style="display: none;">Menggabungkan endoskopi dan USG untuk menghasilkan gambar yang sangat detail dari organ dalam, khususnya di saluran pencernaan dan sekitarnya.</span>
                 </li>
                 <li>
-                  <strong>MRI Elastography:</strong> Advanced imaging for
-                  assessing liver stiffness and fibrosis.
+                  <strong id="mri-tech-label-en">MRI Elastography:</strong><strong id="mri-tech-label-id" style="display: none;">MRI Elastografi:</strong> 
+                  <span id="mri-tech-desc-en">Advanced imaging for assessing liver stiffness and fibrosis.</span>
+                  <span id="mri-tech-desc-id" style="display: none;">Teknologi pencitraan lanjutan untuk menilai kekakuan dan fibrosis hati.</span>
                 </li>
                 <li>
-                  <strong>FibroScan:</strong> Non-invasive method to evaluate
-                  liver health.
+                  <strong id="fibro-tech-label-en">FibroScan:</strong><strong id="fibro-tech-label-id" style="display: none;">Fibroscan:</strong> 
+                  <span id="fibro-tech-desc-en">Non-invasive method to evaluate liver health.</span>
+                  <span id="fibro-tech-desc-id" style="display: none;">Metode non-invasif untuk menilai kesehatan hati.</span>
                 </li>
                 <li>
-                  <strong>Endoscopy, ERCP, and Capsule Endoscopy:</strong>
-                  Cutting-edge tools for both diagnostic and therapeutic use.
+                  <strong id="endoscopy-tech-label-en">Endoscopy, ERCP, and Capsule Endoscopy:</strong><strong id="endoscopy-tech-label-id" style="display: none;">Endoskopi, ERCP, dan Endoskopi Kapsul:</strong> 
+                  <span id="endoscopy-tech-desc-en">Cutting-edge tools for both diagnostic and therapeutic use.</span>
+                  <span id="endoscopy-tech-desc-id" style="display: none;">Peralatan modern untuk diagnosis dan terapi.</span>
                 </li>
               </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span class="service-title" id="accordion-3-title-en">Gastroenterology and Hepatology Team</span>
+              <span class="service-title" id="accordion-3-title-id" style="display: none;">Tim Dokter Gastroenterologi dan Hepatologi</span>
+              <i class="fas fa-chevron-down accordion-icon"></i>
+            </div>
+            <div class="accordion-content">
+              <p class="section-description" id="team-desc-en">
+                Our Gastroenterology and Hepatology doctors specialize in treating digestive and liver problems. We are committed to providing high-quality care to help patients feel better and live healthier lives.
+              </p>
+              <p class="section-description" id="team-desc-id" style="display: none;">
+                Tim dokter Gastroenterologi dan Hepatologi menangani masalah pencernaan dan hati. Kami berkomitmen untuk memberikan perawatan berkualitas kepada pasien.
+              </p>
+              
+              <h4 class="team-subtitle" id="meet-doctors-en">Meet Our Doctors:</h4>
+              <h4 class="team-subtitle" id="meet-doctors-id" style="display: none;">Tim Dokter Gastroenterologi dan Hepatologi:</h4>
+              
+              <div class="doctor-list">
+                <div class="doctor-item">
+                  <img src="assets/images/dr_rinaldi_lesmana.jpg" alt="Dr. Rinaldi Lesmana" class="doctor-photo">
+                  <span class="doctor-name">Dr. dr. Rinaldi Lesmana, Sp.PD-KGEH, FACP, FACG, FINASIM</span>
+                </div>
+                <div class="doctor-item">
+                  <img src="assets/images/dr_waldemar_simanjuntak.jpg" alt="dr. Waldemar Simanjuntak" class="doctor-photo">
+                  <span class="doctor-name">dr. Med. Waldemar Simanjuntak, Sp.PD-KGEH</span>
+                </div>
+                <div class="doctor-item">
+                  <img src="assets/images/dr_david_widjaja.jpg" alt="dr. David Widjaja" class="doctor-photo">
+                  <span class="doctor-name">dr. David Widjaja, Sp.PD</span>
+                </div>
+                <div class="doctor-item">
+                  <img src="assets/images/dr_oska_mesanti.jpg" alt="dr. Oska Mesanti" class="doctor-photo">
+                  <span class="doctor-name">dr. Oska Mesanti, Sp.PD-KGEH</span>
+                </div>
+                <div class="doctor-item">
+                  <img src="assets/images/dr_chyntia_olivia.jpg" alt="dr. Chyntia Olivia" class="doctor-photo">
+                  <span class="doctor-name">dr. Chyntia Olivia, PhD, Sp.PD-KGEH, MARS, SH, FINASIM</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -189,6 +283,51 @@
     </div>
 
     <script>
+      // Language detection and switching
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get language from URL parameter or localStorage, default to 'en'
+        const urlParams = new URLSearchParams(window.location.search);
+        const lang =
+          urlParams.get("lang") ||
+          localStorage.getItem("selectedLanguage") ||
+          "en";
+
+        // Get all language-specific elements
+        const elemsId = document.querySelectorAll('[id$="-id"]');
+        const elemsEn = document.querySelectorAll('[id$="-en"]');
+
+        if (lang === "id") {
+          // Show all Indonesian elements, hide all English elements
+          elemsEn.forEach(elem => elem.style.display = "none");
+          elemsId.forEach(elem => {
+            const tagName = elem.tagName.toLowerCase();
+            if (tagName === 'span') {
+              elem.style.display = "inline";
+            } else if (tagName === 'strong' || tagName === 'h4' || tagName === 'h1' || tagName === 'p' || tagName === 'li') {
+              elem.style.display = "block";
+            } else {
+              elem.style.display = "block";
+            }
+          });
+        } else {
+          // Show all English elements, hide all Indonesian elements
+          elemsId.forEach(elem => elem.style.display = "none");
+          elemsEn.forEach(elem => {
+            const tagName = elem.tagName.toLowerCase();
+            if (tagName === 'span') {
+              elem.style.display = "inline";
+            } else if (tagName === 'h1' || tagName === 'p' || tagName === 'li') {
+              elem.style.display = "block";
+            } else {
+              elem.style.display = "block";
+            }
+          });
+        }
+
+        // Store language preference
+        localStorage.setItem("selectedLanguage", lang);
+      });
+
       // Accordion functionality
       document.addEventListener("DOMContentLoaded", function () {
         const accordionItems = document.querySelectorAll(".accordion-item");
