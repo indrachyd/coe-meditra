@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cardiology - Medistra COE</title>
-    <link rel="stylesheet" href="cardiology.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&display=swap"
       rel="stylesheet"
@@ -13,6 +12,577 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
     />
+    <style>
+      /* Reset and Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        background-color: #ffffff;
+        color: #333;
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      /* Header Section */
+      .header {
+        position: relative;
+      }
+
+      .hero-section {
+        position: relative;
+        height: 300px;
+        background: linear-gradient(
+            135deg,
+            rgba(36, 94, 128, 0.4),
+            rgba(36, 94, 128, 0.25)
+          ),
+          linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.25)),
+          url("assets/images/doctor_cardiology.jpg");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding: 20px;
+
+        box-shadow: 0 4px 20px rgba(36, 94, 128, 0.3),
+          /* Shadow blue teal */ 0 8px 40px rgba(36, 94, 128, 0.25),
+          /* Shadow blue teal medium */ 0 12px 60px rgba(36, 94, 128, 0.2),
+          /* Shadow blue teal dark */ 0 0 0 1px rgba(36, 94, 128, 0.1); /* Border glow */
+      }
+
+      /* Back Button */
+      .back-button {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background: rgba(255, 255, 255, 0.2);
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+        z-index: 10;
+
+        box-shadow: 0 0 20px rgba(36, 94, 128, 0.3),
+          0 0 40px rgba(36, 94, 128, 0.2);
+      }
+
+      .back-button:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: scale(1.05);
+      }
+
+      .back-button i {
+        color: white;
+        font-size: 18px;
+      }
+
+      /* Cardiology Icon */
+      .cardiology-icon {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(10px);
+        z-index: 10;
+        /* Efek glow biru/ungu */
+        box-shadow: 0 0 25px rgba(36, 94, 128, 0.4),
+          0 0 50px rgba(36, 94, 128, 0.25);
+      }
+
+      .cardiology-icon img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+      }
+
+      /* Hero Content */
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        color: white;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+
+      .coe-label {
+        font-family: "Raleway", sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        margin-bottom: 0px;
+        opacity: 0.9;
+        letter-spacing: 0.5px;
+      }
+
+      .coe-title {
+        font-family: "Raleway", sans-serif;
+        font-weight: 500;
+        font-size: 36px;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        line-height: 1.1;
+      }
+
+      /* Main Content */
+      .main-content {
+        background-color: #ffffff;
+        padding: 30px 20px;
+        margin-top: -20px;
+        border-radius: 20px 20px 0 0;
+        position: relative;
+        z-index: 3;
+        overflow: hidden;
+      }
+
+      /* Leaf Background Decoration */
+      .main-content::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 350px;
+        height: 350px;
+        background-image: url("assets/images/leaf.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        opacity: 2;
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      .introduction,
+      .services-accordion {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Introduction */
+      .introduction {
+        margin-bottom: 30px;
+      }
+
+      .intro-text {
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: #555;
+        text-align: justify;
+      }
+
+      .intro-text strong {
+        color: #333;
+        font-weight: 600;
+      }
+
+      /* Services Accordion */
+      .services-accordion {
+        margin-top: 20px;
+      }
+
+      .accordion-item {
+        border-bottom: 1px solid #e0e0e0;
+        margin-bottom: 0;
+      }
+
+      .accordion-item:last-child {
+        border-bottom: none;
+      }
+
+      .accordion-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        user-select: none;
+      }
+
+      .accordion-header:hover {
+        background-color: #ffffff;
+        padding: 0px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 8px;
+      }
+
+      .service-title {
+        font-family: "Raleway", sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        color: #333;
+        flex: 1;
+      }
+
+      .accordion-icon {
+        font-size: 14px;
+        color: #666;
+        transition: transform 0.3s ease;
+        margin-left: 10px;
+      }
+
+      .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+
+      .accordion-content.active {
+        max-height: 2000px;
+      }
+
+      .section-description {
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 15px;
+        line-height: 1.6;
+      }
+
+      .service-list {
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
+        padding: 0 0 10px 0;
+        margin: 0;
+        list-style-type: none;
+      }
+
+      .service-list li {
+        padding: 8px 0;
+        font-size: 14px;
+        color: #666;
+        position: relative;
+        padding-left: 20px;
+      }
+
+      .service-list li::before {
+        content: "•";
+        color: #000000;
+        font-weight: bold;
+        position: relative;
+        left: -15px;
+        margin-right: 5px;
+      }
+
+      .sub-service-list {
+        list-style: none;
+        margin-top: 5px;
+        padding-left: 15px;
+      }
+
+      .sub-service-list li {
+        padding: 4px 0;
+        font-size: 13px;
+        color: #777;
+      }
+
+      .sub-service-list li::before {
+        content: "•";
+        color: #000000;
+        position: relative;
+        left: -10px;
+        margin-right: 5px;
+      }
+
+      /* Treatment sections */
+      .treatment-section {
+        font-family: "Raleway", sans-serif;
+        font-weight: 600;
+        margin-bottom: 30px;
+      }
+
+      .treatment-section h4 {
+        font-family: "Raleway", sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 15px;
+      }
+
+      .image-container {
+        margin-bottom: 15px;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .treatment-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .image-description {
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        color: #666;
+        line-height: 1.5;
+      }
+
+      /* Active state styling */
+      .accordion-item.active .accordion-header {
+        background-color: #ffffff;
+        padding: 0px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 8px;
+      }
+
+      .accordion-item.active .service-title {
+        color: #000000;
+        background-color: #ffffff;
+      }
+
+      /* Doctor List Styling */
+      .doctor-list {
+        margin: 20px 0;
+      }
+
+      .doctor-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        padding: 10px 0;
+      }
+
+      .doctor-photo {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 15px;
+        flex-shrink: 0;
+      }
+
+      .doctor-name {
+        font-family: "Raleway", sans-serif;
+        font-size: 14px;
+        color: #666;
+        line-height: 1.4;
+      }
+
+      /* Team Subtitle Styling */
+      .team-subtitle {
+        font-family: "Raleway", sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      /* Touch-friendly improvements */
+      .accordion-header {
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+      }
+
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 375px) {
+        .hero-section {
+          height: 280px;
+          padding: 15px;
+        }
+
+        .coe-title {
+          font-size: 28px;
+        }
+
+        .cardiology-icon {
+          width: 50px;
+          height: 50px;
+        }
+
+        .cardiology-icon img {
+          width: 35px;
+          height: 35px;
+        }
+
+        .back-button {
+          width: 35px;
+          height: 35px;
+        }
+
+        .back-button i {
+          font-size: 16px;
+        }
+
+        .main-content {
+          padding: 25px 15px;
+        }
+
+        .intro-text {
+          font-size: 15px;
+        }
+
+        .service-title {
+          font-size: 15px;
+        }
+      }
+
+      @media (max-width: 320px) {
+        .hero-section {
+          height: 260px;
+        }
+
+        .coe-title {
+          font-size: 24px;
+        }
+
+        .main-content {
+          padding: 20px 12px;
+        }
+
+        .intro-text {
+          font-size: 14px;
+        }
+      }
+
+      /* Desktop Styles - Keep mobile's style horizontally */
+      @media (min-width: 768px) {
+        body {
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          min-height: 100vh;
+          background: linear-gradient(135deg, #f0f4f8 0%, #e0ecf3 100%);
+        }
+
+        .page-wrapper {
+          max-width: 500px;
+          width: 100%;
+          background: white;
+          box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+          min-height: 100vh;
+          position: relative;
+        }
+
+        /* Header adjustments */
+        .header {
+          width: 100%;
+        }
+
+        .hero-section {
+          height: 350px;
+          padding: 25px;
+          border-radius: 0;
+        }
+
+        .coe-title {
+          font-size: 40px;
+        }
+
+        .coe-label {
+          font-size: 18px;
+        }
+
+        /* Main content adjustments */
+        .main-content {
+          padding: 35px 25px;
+          border-radius: 25px 25px 0 0;
+          margin-top: -20px;
+        }
+
+        .intro-text {
+          font-size: 16px;
+          text-align: justify;
+        }
+
+        .service-title {
+          font-size: 20px;
+        }
+
+        .accordion-header {
+          padding: 20px 0;
+        }
+
+        /* Adjust leaf decoration */
+        .main-content::after {
+          width: 350px;
+          height: 350px;
+          background-image: url("assets/images/leaf.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: bottom right;
+          opacity: 2;
+        }
+
+        .back-button {
+          width: 40px;
+          height: 40px;
+          top: 20px;
+          left: 20px;
+        }
+
+        .back-button i {
+          font-size: 18px;
+        }
+
+        .oncology-icon {
+          width: 60px;
+          height: 60px;
+          top: 20px;
+          right: 20px;
+        }
+
+        .oncology-icon img {
+          width: 40px;
+          height: 40px;
+        }
+
+        .section-description {
+          font-size: 16px;
+        }
+
+        .numbered-service-list li {
+          font-size: 14px;
+          padding-left: 30px;
+        }
+
+        .numbering-accordion-title {
+          font-size: 16px;
+        }
+
+        .sub-service-list li {
+          font-size: 13px;
+        }
+      }
+
+      /* Smooth transition for window resize */
+      @media (min-width: 768px) {
+        html {
+          transition: all 0.3s ease;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="page-wrapper">
@@ -33,7 +603,9 @@
           <div class="hero-content">
             <p class="coe-label">Center of Excellence</p>
             <p class="coe-title" id="ceo-title-en">Cardiology</p>
-            <p class="coe-title" id="ceo-title-id" style="display: none;">Kardiologi</p>
+            <p class="coe-title" id="ceo-title-id" style="display: none">
+              Kardiologi
+            </p>
           </div>
         </div>
       </header>
@@ -70,8 +642,15 @@
         <section class="services-accordion">
           <div class="accordion-item active">
             <div class="accordion-header">
-              <span class="service-title" id="accordion-title-1-en">Diagnostic & Screening Services</span>
-              <span class="service-title" id="accordion-title-1-id" style="display: none;">Layanan Diagnostik & Skrining</span>
+              <span class="service-title" id="accordion-title-1-en"
+                >Diagnostic & Screening Services</span
+              >
+              <span
+                class="service-title"
+                id="accordion-title-1-id"
+                style="display: none"
+                >Layanan Diagnostik & Skrining</span
+              >
               <i class="fas fa-chevron-down accordion-icon"></i>
             </div>
             <div class="accordion-content active">
@@ -79,16 +658,29 @@
                 Our cardiology department offers a complete range of diagnostic
                 tools to detect and monitor heart conditions:
               </p>
-              <p class="section-description" id="desc-1-id" style="display: none;">
-                Departemen kardiologi kami menyediakan berbagai alat diagnostik lengkap untuk mendeteksi dan memantau kondisi jantung:
+              <p
+                class="section-description"
+                id="desc-1-id"
+                style="display: none"
+              >
+                Departemen kardiologi kami menyediakan berbagai alat diagnostik
+                lengkap untuk mendeteksi dan memantau kondisi jantung:
               </p>
               <ul class="service-list">
                 <li id="item-1-en">Electrocardiography (ECG)</li>
-                <li id="item-1-id" style="display: none;">Elektrokardiografi (EKG)</li>
+                <li id="item-1-id" style="display: none">
+                  Elektrokardiografi (EKG)
+                </li>
                 <li id="item-2-en">Holter monitoring (1, 3, and 7 days)</li>
-                <li id="item-2-id" style="display: none;">Holter monitoring (1, 3, dan 7 hari)</li>
-                <li id="item-3-en">24-hour Ambulatory Blood Pressure Monitoring</li>
-                <li id="item-3-id" style="display: none;">Ambulatory Blood Pressure Monitoring 24 jam</li>
+                <li id="item-2-id" style="display: none">
+                  Holter monitoring (1, 3, dan 7 hari)
+                </li>
+                <li id="item-3-en">
+                  24-hour Ambulatory Blood Pressure Monitoring
+                </li>
+                <li id="item-3-id" style="display: none">
+                  Ambulatory Blood Pressure Monitoring 24 jam
+                </li>
                 <li>Ankle Brachial Index</li>
                 <li>Treadmill Stress Test</li>
                 <li>Transthoracic Echocardiography (TTE)</li>
@@ -105,8 +697,15 @@
 
           <div class="accordion-item active">
             <div class="accordion-header">
-              <span class="service-title" id="accordion-title-2-en">Diagnosis & Treatment</span>
-              <span class="service-title" id="accordion-title-2-id" style="display: none;">Diagnosis & Pengobatan</span>
+              <span class="service-title" id="accordion-title-2-en"
+                >Diagnosis & Treatment</span
+              >
+              <span
+                class="service-title"
+                id="accordion-title-2-id"
+                style="display: none"
+                >Diagnosis & Pengobatan</span
+              >
               <i class="fas fa-chevron-down accordion-icon"></i>
             </div>
             <div class="accordion-content active">
@@ -115,13 +714,21 @@
                 technologies to support accurate diagnosis and effective
                 treatment.
               </p>
-              <p class="section-description" id="desc-2-id" style="display: none;">
-                Rumah Sakit Medistra dilengkapi dengan teknologi medis terkini untuk mendukung diagnosis yang akurat dan pengobatan yang efektif.
+              <p
+                class="section-description"
+                id="desc-2-id"
+                style="display: none"
+              >
+                Rumah Sakit Medistra dilengkapi dengan teknologi medis terkini
+                untuk mendukung diagnosis yang akurat dan pengobatan yang
+                efektif.
               </p>
 
               <div class="treatment-section">
                 <h4 id="treatment-room-en">Treatment Room</h4>
-                <h4 id="treatment-room-id" style="display: none;">Ruang Pengobatan</h4>
+                <h4 id="treatment-room-id" style="display: none">
+                  Ruang Pengobatan
+                </h4>
                 <div class="image-container">
                   <img
                     src="assets/images/doctor_cardiology.jpg"
@@ -134,14 +741,20 @@
                   support doctors in performing necessary interventions to aid
                   patient recovery.
                 </p>
-                <p class="image-description" id="desc-troom-id" style="display: none;">
-                  Ruangan prosedur kami dilengkapi dengan peralatan modern untuk mendukung dokter dalam melakukan intervensi yang diperlukan guna membantu pemulihan pasien.
+                <p
+                  class="image-description"
+                  id="desc-troom-id"
+                  style="display: none"
+                >
+                  Ruangan prosedur kami dilengkapi dengan peralatan modern untuk
+                  mendukung dokter dalam melakukan intervensi yang diperlukan
+                  guna membantu pemulihan pasien.
                 </p>
               </div>
 
               <div class="treatment-section">
                 <h4 id="stress-test-en">Stress Test</h4>
-                <h4 id="stress-test-id" style="display: none;">Stress Test</h4>
+                <h4 id="stress-test-id" style="display: none">Stress Test</h4>
                 <div class="image-container">
                   <img
                     src="assets/images/stress-test-machine.png"
@@ -155,8 +768,16 @@
                   on a treadmill at increasing speeds while their ECG, blood
                   pressure, and heart rate are closely monitored.
                 </p>
-                <p class="image-description" id="desc-stress-id" style="display: none;">
-                  Stress test digunakan untuk mendeteksi masalah jantung yang mungkin hanya terjadi selama aktivitas fisik. Selama tes, pasien berjalan di atas treadmill dengan kecepatan yang terus meningkat, sementara EKG, tekanan darah, dan detak jantung mereka dipantau secara ketat.
+                <p
+                  class="image-description"
+                  id="desc-stress-id"
+                  style="display: none"
+                >
+                  Stress test digunakan untuk mendeteksi masalah jantung yang
+                  mungkin hanya terjadi selama aktivitas fisik. Selama tes,
+                  pasien berjalan di atas treadmill dengan kecepatan yang terus
+                  meningkat, sementara EKG, tekanan darah, dan detak jantung
+                  mereka dipantau secara ketat.
                 </p>
               </div>
             </div>
@@ -164,24 +785,37 @@
 
           <div class="accordion-item">
             <div class="accordion-header">
-              <span class="service-title" id="accordion-title-3-en">Cardiac Medical & Surgical Services</span>
-              <span class="service-title" id="accordion-title-3-id" style="display: none;">Layanan Medis & Bedah Jantung</span>
+              <span class="service-title" id="accordion-title-3-en"
+                >Cardiac Medical & Surgical Services</span
+              >
+              <span
+                class="service-title"
+                id="accordion-title-3-id"
+                style="display: none"
+                >Layanan Medis & Bedah Jantung</span
+              >
               <i class="fas fa-chevron-down accordion-icon"></i>
             </div>
             <div class="accordion-content">
               <ul class="service-list">
                 <strong id="chd-title-en">Coronary Heart Disease</strong>
-                <strong id="chd-title-id" style="display: none;">Penyakit Jantung Koroner</strong>
+                <strong id="chd-title-id" style="display: none"
+                  >Penyakit Jantung Koroner</strong
+                >
                 <ul class="sub-service-list">
                   <li id="cor-angio-en">Coronary Angiography</li>
-                  <li id="cor-angio-id" style="display: none;">Angiografi Koroner</li>
+                  <li id="cor-angio-id" style="display: none">
+                    Angiografi Koroner
+                  </li>
                   <li id="pci-stent-en">
                     Percutaneous Coronary Intervention (stent placement) using
                     Drug-Eluting Stents (DES) and novel bioresorbable stents
                     (DynamX)
                   </li>
-                  <li id="pci-stent-id" style="display: none;">
-                    Intervensi Koroner Perkutan (PCI) menggunakan Stent Dilapisi Obat (Drug-Eluting Stents/DES) dan stent bioresorbable terbaru (DynamX).
+                  <li id="pci-stent-id" style="display: none">
+                    Intervensi Koroner Perkutan (PCI) menggunakan Stent Dilapisi
+                    Obat (Drug-Eluting Stents/DES) dan stent bioresorbable
+                    terbaru (DynamX).
                   </li>
                   <li id="pci-advanced-en">
                     Advanced PCI using technologies such as Intravascular
@@ -189,13 +823,20 @@
                     Rotablator, Orbital Atherectomy System (OAS), and
                     Intravascular Lithotripsy (IVL)
                   </li>
-                  <li id="pci-advanced-id" style="display: none;">
-                    PCI Lanjutan menggunakan teknologi seperti Intravascular Ultrasound (IVUS), Optical Coherence Tomography (OCT), Rotablator, Orbital Atherectomy System (OAS), dan Intravascular Lithotripsy (IVL).
+                  <li id="pci-advanced-id" style="display: none">
+                    PCI Lanjutan menggunakan teknologi seperti Intravascular
+                    Ultrasound (IVUS), Optical Coherence Tomography (OCT),
+                    Rotablator, Orbital Atherectomy System (OAS), dan
+                    Intravascular Lithotripsy (IVL).
                   </li>
                 </ul>
                 <br />
-                <strong id="heart-rhythm-en">Heart Rhythm Disorders (Arrhythmia)</strong>
-                <strong id="heart-rhythm-id" style="display: none;">Gangguan Irama Jantung (Aritmia)</strong>
+                <strong id="heart-rhythm-en"
+                  >Heart Rhythm Disorders (Arrhythmia)</strong
+                >
+                <strong id="heart-rhythm-id" style="display: none"
+                  >Gangguan Irama Jantung (Aritmia)</strong
+                >
                 <ul class="sub-service-list">
                   <li>Electrophysiology Studies</li>
                   <li>Radiofrequency Ablation</li>
@@ -207,86 +848,134 @@
                 <br />
 
                 <strong id="heart-surgery-en">Heart Surgery</strong>
-                <strong id="heart-surgery-id" style="display: none;">Bedah Jantung</strong>
+                <strong id="heart-surgery-id" style="display: none"
+                  >Bedah Jantung</strong
+                >
                 <ul class="sub-service-list">
                   <li>Coronary Artery Bypass Grafting (CABG)</li>
-                  <li id="valve-surgery-en">Conventional or minimally invasive valve surgery</li>
-                  <li id="valve-surgery-id" style="display: none;">Bedah Katup Konvensional atau Invasif Minimal</li>
-                  <li id="aneurysm-repair-en">Thoracic aortic aneurysm repair (TEVAR/EVAR)</li>
-                  <li id="aneurysm-repair-id" style="display: none;">Perbaikan Aneurisma Aorta Toraks (TEVAR/EVAR)</li>
+                  <li id="valve-surgery-en">
+                    Conventional or minimally invasive valve surgery
+                  </li>
+                  <li id="valve-surgery-id" style="display: none">
+                    Bedah Katup Konvensional atau Invasif Minimal
+                  </li>
+                  <li id="aneurysm-repair-en">
+                    Thoracic aortic aneurysm repair (TEVAR/EVAR)
+                  </li>
+                  <li id="aneurysm-repair-id" style="display: none">
+                    Perbaikan Aneurisma Aorta Toraks (TEVAR/EVAR)
+                  </li>
                 </ul>
 
                 <br />
 
                 <strong id="heart-valve-en">Heart Valve Disorders</strong>
-                <strong id="heart-valve-id" style="display: none;">Gangguan Katup Jantung</strong>
+                <strong id="heart-valve-id" style="display: none"
+                  >Gangguan Katup Jantung</strong
+                >
                 <ul class="sub-service-list">
                   <li id="tavi-en">
                     TAVI (Transcatheter Aortic Valve Implantation)A non-surgical
                     procedure to replace narrowed aortic valves using
                     catheterization
                   </li>
-                  <li id="tavi-id" style="display: none;">
-                    TAVI (Transcatheter Aortic Valve Implantation): Prosedur non-bedah untuk mengganti katup aorta yang menyempit menggunakan kateterisasi.
+                  <li id="tavi-id" style="display: none">
+                    TAVI (Transcatheter Aortic Valve Implantation): Prosedur
+                    non-bedah untuk mengganti katup aorta yang menyempit
+                    menggunakan kateterisasi.
                   </li>
                   <li id="tricvalve-en">
                     TricValve. A non-surgical procedure for placing bicaval
                     valves in the superior and inferior vena cava
                   </li>
-                  <li id="tricvalve-id" style="display: none;">
-                    TricValve: Prosedur non-bedah untuk memasang katup bikaval di vena kava superior dan inferior.
+                  <li id="tricvalve-id" style="display: none">
+                    TricValve: Prosedur non-bedah untuk memasang katup bikaval
+                    di vena kava superior dan inferior.
                   </li>
                   <li id="mitral-clip-en">
                     Mitral Clip. A non-surgical procedure to repair mitral valve
                     leakage using a special device via catheter
                   </li>
-                  <li id="mitral-clip-id" style="display: none;">
-                    MitraClip: Prosedur non-bedah untuk memperbaiki kebocoran katup mitral menggunakan alat khusus melalui kateter.
+                  <li id="mitral-clip-id" style="display: none">
+                    MitraClip: Prosedur non-bedah untuk memperbaiki kebocoran
+                    katup mitral menggunakan alat khusus melalui kateter.
                   </li>
                   <li id="tricuspid-clip-en">
                     Tricuspid Clip. A non-surgical procedure to repair tricuspid
                     valve leakage via catheterization
                   </li>
-                  <li id="tricuspid-clip-id" style="display: none;">
-                    Tricuspid Clip: Prosedur non-bedah untuk memperbaiki kebocoran katup trikuspid melalui kateterisasi.
+                  <li id="tricuspid-clip-id" style="display: none">
+                    Tricuspid Clip: Prosedur non-bedah untuk memperbaiki
+                    kebocoran katup trikuspid melalui kateterisasi.
                   </li>
                 </ul>
 
                 <br />
                 <strong id="laa-closure-en">LAA Closure</strong>
-                <strong id="laa-closure-id" style="display: none;">Penutupan LAA (Left Atrial Appendage)</strong>
+                <strong id="laa-closure-id" style="display: none"
+                  >Penutupan LAA (Left Atrial Appendage)</strong
+                >
                 <p class="image-description" id="desc-laa-en">
                   A procedure to close the left atrial appendage, especially for
                   atrial fibrillation patients at high risk of stroke.
                 </p>
-                <p class="image-description" id="desc-laa-id" style="display: none;">
-                  Prosedur untuk menutup apendiks atrium kiri, terutama untuk pasien fibrilasi atrium yang berisiko tinggi terkena stroke.
+                <p
+                  class="image-description"
+                  id="desc-laa-id"
+                  style="display: none"
+                >
+                  Prosedur untuk menutup apendiks atrium kiri, terutama untuk
+                  pasien fibrilasi atrium yang berisiko tinggi terkena stroke.
                 </p>
 
                 <br />
-                <strong id="crtd-title-en">CRTD (Cardiac Resynchronization Therapy Defibrillator)</strong>
-                <strong id="crtd-title-id" style="display: none;">CRTD (Cardiac Resynchronization Therapy Defibrillator)</strong>
+                <strong id="crtd-title-en"
+                  >CRTD (Cardiac Resynchronization Therapy
+                  Defibrillator)</strong
+                >
+                <strong id="crtd-title-id" style="display: none"
+                  >CRTD (Cardiac Resynchronization Therapy
+                  Defibrillator)</strong
+                >
                 <p class="image-description" id="desc-crtd-en">
                   An implantable device for heart failure patients at high risk
                   of sudden cardiac death. This device works as a biventricular
                   pacemaker and provides shocks during rapid heartbeats or
                   ventricular fibrillation.
                 </p>
-                <p class="image-description" id="desc-crtd-id" style="display: none;">
-                  Alat implan untuk pasien gagal jantung dengan risiko tinggi kematian jantung mendadak. Alat ini berfungsi sebagai pacemaker biventricular dan memberikan kejut listrik selama detak jantung cepat atau fibrilasi ventrikel.
+                <p
+                  class="image-description"
+                  id="desc-crtd-id"
+                  style="display: none"
+                >
+                  Alat implan untuk pasien gagal jantung dengan risiko tinggi
+                  kematian jantung mendadak. Alat ini berfungsi sebagai
+                  pacemaker biventricular dan memberikan kejut listrik selama
+                  detak jantung cepat atau fibrilasi ventrikel.
                 </p>
 
                 <br />
-                <strong id="cardiac-rehab-title-en">Cardiac Rehabilitation</strong>
-                <strong id="cardiac-rehab-title-id" style="display: none;">Rehabilitasi Jantung</strong>
+                <strong id="cardiac-rehab-title-en"
+                  >Cardiac Rehabilitation</strong
+                >
+                <strong id="cardiac-rehab-title-id" style="display: none"
+                  >Rehabilitasi Jantung</strong
+                >
                 <p class="image-description" id="desc-rehab-en">
                   An implantable device for heart failure patients at high risk
                   of sudden cardiac death. This device works as a biventricular
                   pacemaker and provides shocks during rapid heartbeats or
                   ventricular fibrillation.
                 </p>
-                <p class="image-description" id="desc-rehab-id" style="display: none;">
-                  Program latihan terawasi untuk pasien setelah intervensi koroner atau bedah jantung, bertujuan membantu pemulihan aktivitas sehari-hari, meningkatkan kualitas hidup, dan mencegah kekambuhan atau kejadian jantung fatal.
+                <p
+                  class="image-description"
+                  id="desc-rehab-id"
+                  style="display: none"
+                >
+                  Program latihan terawasi untuk pasien setelah intervensi
+                  koroner atau bedah jantung, bertujuan membantu pemulihan
+                  aktivitas sehari-hari, meningkatkan kualitas hidup, dan
+                  mencegah kekambuhan atau kejadian jantung fatal.
                 </p>
               </ul>
             </div>
@@ -294,8 +983,15 @@
 
           <div class="accordion-item">
             <div class="accordion-header">
-              <span class="service-title" id="accordion-title-4-en">24-Hour Cardiac Emergency Services</span>
-              <span class="service-title" id="accordion-title-4-id" style="display: none;">Layanan Kegawatdaruratan Jantung 24 Jam</span>
+              <span class="service-title" id="accordion-title-4-en"
+                >24-Hour Cardiac Emergency Services</span
+              >
+              <span
+                class="service-title"
+                id="accordion-title-4-id"
+                style="display: none"
+                >Layanan Kegawatdaruratan Jantung 24 Jam</span
+              >
               <i class="fas fa-chevron-down accordion-icon"></i>
             </div>
             <div class="accordion-content">
@@ -305,135 +1001,291 @@
                 Coronary Intervention) to treat heart attacks in under 90
                 minutes (door-to-balloon time).
               </p>
-              <p class="image-description" id="desc-emergency-id" style="display: none;">
-                Layanan Cardiac Emergency RS Medistra siap 24 jam setiap hari, dilengkapi dengan prosedur Primary PCI untuk menangani serangan jantung akut dalam waktu kurang dari 90 menit (door-to-balloon time), sesuai standar internasional.
+              <p
+                class="image-description"
+                id="desc-emergency-id"
+                style="display: none"
+              >
+                Layanan Cardiac Emergency RS Medistra siap 24 jam setiap hari,
+                dilengkapi dengan prosedur Primary PCI untuk menangani serangan
+                jantung akut dalam waktu kurang dari 90 menit (door-to-balloon
+                time), sesuai standar internasional.
               </p>
             </div>
           </div>
 
           <div class="accordion-item">
             <div class="accordion-header">
-              <span class="service-title" id="accordion-title-6-en">Modern Facilities</span>
-              <span class="service-title" id="accordion-title-6-id" style="display: none;">Fasilitas Modern</span>
+              <span class="service-title" id="accordion-title-6-en"
+                >Modern Facilities</span
+              >
+              <span
+                class="service-title"
+                id="accordion-title-6-id"
+                style="display: none"
+                >Fasilitas Modern</span
+              >
               <i class="fas fa-chevron-down accordion-icon"></i>
             </div>
             <div class="accordion-content">
               <ul class="service-list">
-                <li id="facility-1-en">Cath Lab (Catheterization Laboratory)</li>
-                <li id="facility-1-id" style="display: none;">Cath Lab (Laboratorium Kateterisasi)</li>
+                <li id="facility-1-en">
+                  Cath Lab (Catheterization Laboratory)
+                </li>
+                <li id="facility-1-id" style="display: none">
+                  Cath Lab (Laboratorium Kateterisasi)
+                </li>
                 <li id="facility-2-en">Intensive Cardiac Care Unit (ICCU)</li>
-                <li id="facility-2-id" style="display: none;">Intensive Cardiovascular Care Unit (ICCU)</li>
+                <li id="facility-2-id" style="display: none">
+                  Intensive Cardiovascular Care Unit (ICCU)
+                </li>
                 <li id="facility-3-en">Temporary & Permanent Pacemakers</li>
-                <li id="facility-3-id" style="display: none;">Pacemakers Sementara & Permanen</li>
+                <li id="facility-3-id" style="display: none">
+                  Pacemakers Sementara & Permanen
+                </li>
                 <li id="facility-4-en">Intravascular Ultrasound (IVUS)</li>
-                <li id="facility-4-id" style="display: none;">Intravascular Ultrasound (IVUS)</li>
+                <li id="facility-4-id" style="display: none">
+                  Intravascular Ultrasound (IVUS)
+                </li>
                 <li id="facility-5-en">Optical Coherence Tomography (OCT)</li>
-                <li id="facility-5-id" style="display: none;">Optical Coherence Tomography (OCT)</li>
+                <li id="facility-5-id" style="display: none">
+                  Optical Coherence Tomography (OCT)
+                </li>
                 <li id="facility-6-en">Rotablator</li>
-                <li id="facility-6-id" style="display: none;">Rotablator</li>
+                <li id="facility-6-id" style="display: none">Rotablator</li>
                 <li id="facility-7-en">Orbital Atherectomy System (OAS)</li>
-                <li id="facility-7-id" style="display: none;">Orbital Atherectomy System (OAS)</li>
+                <li id="facility-7-id" style="display: none">
+                  Orbital Atherectomy System (OAS)
+                </li>
                 <li id="facility-8-en">Intravascular Lithotripsy (IVL)</li>
-                <li id="facility-8-id" style="display: none;">Intravascular Lithotripsy (IVL)</li>
-                <li id="facility-9-en">Resting Fractional Flow Reserve (RFR)</li>
-                <li id="facility-9-id" style="display: none;">Resting Fractional Flow Reserve (RFR)</li>
+                <li id="facility-8-id" style="display: none">
+                  Intravascular Lithotripsy (IVL)
+                </li>
+                <li id="facility-9-en">
+                  Resting Fractional Flow Reserve (RFR)
+                </li>
+                <li id="facility-9-id" style="display: none">
+                  Resting Fractional Flow Reserve (RFR)
+                </li>
                 <li id="facility-10-en">Fractional Flow Reserve (FFR)</li>
-                <li id="facility-10-id" style="display: none;">Fractional Flow Reserve (FFR)</li>
+                <li id="facility-10-id" style="display: none">
+                  Fractional Flow Reserve (FFR)
+                </li>
                 <li id="facility-11-en">Instantaneous Wave-Free Ratio (iFR)</li>
-                <li id="facility-11-id" style="display: none;">Instantaneous Wave-Free Ratio (iFR)</li>
+                <li id="facility-11-id" style="display: none">
+                  Instantaneous Wave-Free Ratio (iFR)
+                </li>
                 <li id="facility-12-en">Quantitative Flow Ratio (QFR)</li>
-                <li id="facility-12-id" style="display: none;">Quantitative Flow Ratio (QFR)</li>
+                <li id="facility-12-id" style="display: none">
+                  Quantitative Flow Ratio (QFR)
+                </li>
                 <li id="facility-13-en">Intra-Aortic Balloon Pump (IABP)</li>
-                <li id="facility-13-id" style="display: none;">Intra-Aortic Balloon Pump (IABP)</li>
+                <li id="facility-13-id" style="display: none">
+                  Intra-Aortic Balloon Pump (IABP)
+                </li>
                 <li id="facility-14-en">Cardiac MRI</li>
-                <li id="facility-14-id" style="display: none;">MRI Jantung</li>
-                <li id="facility-15-en">Cardiac CT Scan & Coronary Angiography</li>
-                <li id="facility-15-id" style="display: none;">CT Scan Jantung & Angiografi Koroner</li>
-                <li id="facility-16-en">Cardiac Genetic Testing (for diagnosis & screening)</li>
-                <li id="facility-16-id" style="display: none;">Tes Genetik Jantung (diagnostik & skrining)</li>
+                <li id="facility-14-id" style="display: none">MRI Jantung</li>
+                <li id="facility-15-en">
+                  Cardiac CT Scan & Coronary Angiography
+                </li>
+                <li id="facility-15-id" style="display: none">
+                  CT Scan Jantung & Angiografi Koroner
+                </li>
+                <li id="facility-16-en">
+                  Cardiac Genetic Testing (for diagnosis & screening)
+                </li>
+                <li id="facility-16-id" style="display: none">
+                  Tes Genetik Jantung (diagnostik & skrining)
+                </li>
               </ul>
             </div>
           </div>
 
           <div class="accordion-item">
             <div class="accordion-header">
-              <span class="service-title" id="accordion-title-5-en">Multispecialty Cardiologist Team</span>
-              <span class="service-title" id="accordion-title-5-id" style="display: none;">Tim Dokter Jantung Multi-Spesialisasi</span>
+              <span class="service-title" id="accordion-title-5-en"
+                >Multispecialty Cardiologist Team</span
+              >
+              <span
+                class="service-title"
+                id="accordion-title-5-id"
+                style="display: none"
+                >Tim Dokter Jantung Multi-Spesialisasi</span
+              >
               <i class="fas fa-chevron-down accordion-icon"></i>
             </div>
             <div class="accordion-content">
               <p class="image-description" id="desc-team-en">
-                Our heart team includes highly qualified professors and cardiologists with various sub-specialties in cardiology. Each doctor brings years of clinical experience and deep expertise in their field to provide the best care for every patient.
+                Our heart team includes highly qualified professors and
+                cardiologists with various sub-specialties in cardiology. Each
+                doctor brings years of clinical experience and deep expertise in
+                their field to provide the best care for every patient.
               </p>
-              <p class="image-description" id="desc-team-id" style="display: none;">
-                Tim medis kami terdiri dari para profesor dan dokter spesialis jantung yang memiliki kualifikasi tinggi serta berbagai subspesialisasi di bidang kardiologi. Setiap dokter memiliki pengalaman klinis dan keahlian di bidangnya masing-masing.
+              <p
+                class="image-description"
+                id="desc-team-id"
+                style="display: none"
+              >
+                Tim medis kami terdiri dari para profesor dan dokter spesialis
+                jantung yang memiliki kualifikasi tinggi serta berbagai
+                subspesialisasi di bidang kardiologi. Setiap dokter memiliki
+                pengalaman klinis dan keahlian di bidangnya masing-masing.
               </p>
-              
-              <h4 class="team-subtitle" id="cardiology-team-title-en">Our Cardiology Team:</h4>
-              <h4 class="team-subtitle" id="cardiology-team-title-id" style="display: none;">Tim Dokter Kardiologi:</h4>
-              
+
+              <h4 class="team-subtitle" id="cardiology-team-title-en">
+                Our Cardiology Team:
+              </h4>
+              <h4
+                class="team-subtitle"
+                id="cardiology-team-title-id"
+                style="display: none"
+              >
+                Tim Dokter Kardiologi:
+              </h4>
+
               <div class="doctor-list">
                 <div class="doctor-item">
-                  <img src="assets/images/prof_teguh_santoso.jpg" alt="Prof. Teguh Santoso" class="doctor-photo">
-                  <span class="doctor-name">Prof. Teguh Santoso, MD, PhD, FACC, FESC, FSCAI, FINASIM, FIHA</span>
+                  <img
+                    src="assets/images/prof_teguh_santoso.jpg"
+                    alt="Prof. Teguh Santoso"
+                    class="doctor-photo"
+                  />
+                  <span class="doctor-name"
+                    >Prof. Teguh Santoso, MD, PhD, FACC, FESC, FSCAI, FINASIM,
+                    FIHA</span
+                  >
                 </div>
                 <div class="doctor-item">
-                  <img src="assets/images/prof_dr_hanafi.jpg" alt="Prof. Dr. Hanafi" class="doctor-photo">
-                  <span class="doctor-name">Prof. Dr. Hanafi B. Trisnohadi, Sp.PD-KKV, Sp.JP</span>
+                  <img
+                    src="assets/images/prof_dr_hanafi.jpg"
+                    alt="Prof. Dr. Hanafi"
+                    class="doctor-photo"
+                  />
+                  <span class="doctor-name"
+                    >Prof. Dr. Hanafi B. Trisnohadi, Sp.PD-KKV, Sp.JP</span
+                  >
                 </div>
                 <div class="doctor-item">
-                  <img src="assets/images/dr_jetty.jpg" alt="Dr. Jetty" class="doctor-photo">
-                  <span class="doctor-name">Dr. Jetty H. Sedyawan, Sp.JP(K), FIHA, FASCC</span>
+                  <img
+                    src="assets/images/dr_jetty.jpg"
+                    alt="Dr. Jetty"
+                    class="doctor-photo"
+                  />
+                  <span class="doctor-name"
+                    >Dr. Jetty H. Sedyawan, Sp.JP(K), FIHA, FASCC</span
+                  >
                 </div>
                 <div class="doctor-item">
-                  <img src="assets/images/dr_dono.jpg" alt="Dr. Dono" class="doctor-photo">
-                  <span class="doctor-name">Dr. dr. Dono Antono, Sp.PD-KKV, FINASIM, FICA</span>
+                  <img
+                    src="assets/images/dr_dono.jpg"
+                    alt="Dr. Dono"
+                    class="doctor-photo"
+                  />
+                  <span class="doctor-name"
+                    >Dr. dr. Dono Antono, Sp.PD-KKV, FINASIM, FICA</span
+                  >
                 </div>
                 <div class="doctor-item">
-                  <img src="assets/images/dr_linda_lison.jpg" alt="Dr. Linda" class="doctor-photo">
-                  <span class="doctor-name">Dr. Linda Lison, Sp.JP(K), PhD, FIHA, FACC, FESC, FSCAI, FAPSIC</span>
+                  <img
+                    src="assets/images/dr_linda_lison.jpg"
+                    alt="Dr. Linda"
+                    class="doctor-photo"
+                  />
+                  <span class="doctor-name"
+                    >Dr. Linda Lison, Sp.JP(K), PhD, FIHA, FACC, FESC, FSCAI,
+                    FAPSIC</span
+                  >
                 </div>
                 <div class="doctor-item">
-                  <img src="assets/images/dr_ardian_jahja.jpg" alt="dr. Ardian" class="doctor-photo">
-                  <span class="doctor-name">dr. Ardian Jahja Saputra, Sp.JP, FIHA</span>
+                  <img
+                    src="assets/images/dr_ardian_jahja.jpg"
+                    alt="dr. Ardian"
+                    class="doctor-photo"
+                  />
+                  <span class="doctor-name"
+                    >dr. Ardian Jahja Saputra, Sp.JP, FIHA</span
+                  >
                 </div>
                 <div class="doctor-item">
-                  <img src="assets/images/dr_sunanto_ng.jpg" alt="dr. Sunanto" class="doctor-photo">
-                  <span class="doctor-name">dr. Sunanto Ng, Sp.JP, PhD, FIHA</span>
+                  <img
+                    src="assets/images/dr_sunanto_ng.jpg"
+                    alt="dr. Sunanto"
+                    class="doctor-photo"
+                  />
+                  <span class="doctor-name"
+                    >dr. Sunanto Ng, Sp.JP, PhD, FIHA</span
+                  >
                 </div>
                 <div class="doctor-item">
-                  <img src="assets/images/dr_sri_shujuan.jpg" alt="dr. Sri Shujuan" class="doctor-photo">
+                  <img
+                    src="assets/images/dr_sri_shujuan.jpg"
+                    alt="dr. Sri Shujuan"
+                    class="doctor-photo"
+                  />
                   <span class="doctor-name">dr. Sri Shujuan, Sp.PD-KKV</span>
                 </div>
                 <div class="doctor-item">
-                  <img src="assets/images/dr_birry_karim.jpg" alt="Dr. dr. Birry" class="doctor-photo">
-                  <span class="doctor-name">Dr. dr. Birry Karim, Sp.PD-KKV</span>
+                  <img
+                    src="assets/images/dr_birry_karim.jpg"
+                    alt="Dr. dr. Birry"
+                    class="doctor-photo"
+                  />
+                  <span class="doctor-name"
+                    >Dr. dr. Birry Karim, Sp.PD-KKV</span
+                  >
                 </div>
                 <div class="doctor-item">
-                  <img src="assets/images/dr_mega_febrianora.jpg" alt="dr. Mega" class="doctor-photo">
-                  <span class="doctor-name">dr. Mega Febrianora, Sp.JP(K), FIHA, FAPSC</span>
+                  <img
+                    src="assets/images/dr_mega_febrianora.jpg"
+                    alt="dr. Mega"
+                    class="doctor-photo"
+                  />
+                  <span class="doctor-name"
+                    >dr. Mega Febrianora, Sp.JP(K), FIHA, FAPSC</span
+                  >
                 </div>
               </div>
-              
-              <h4 class="team-subtitle" id="subspecialties-title-en">Available Sub-Specialties:</h4>
-              <h4 class="team-subtitle" id="subspecialties-title-id" style="display: none;">Subspesialisasi yang Tersedia:</h4>
+
+              <h4 class="team-subtitle" id="subspecialties-title-en">
+                Available Sub-Specialties:
+              </h4>
+              <h4
+                class="team-subtitle"
+                id="subspecialties-title-id"
+                style="display: none"
+              >
+                Subspesialisasi yang Tersedia:
+              </h4>
               <ul class="service-list">
                 <li id="specialty-1-en">Interventional Cardiology</li>
-                <li id="specialty-1-id" style="display: none;">Kardiologi Intervensi</li>
+                <li id="specialty-1-id" style="display: none">
+                  Kardiologi Intervensi
+                </li>
                 <li id="specialty-2-en">Echocardiography</li>
-                <li id="specialty-2-id" style="display: none;">Ekokardiografi</li>
+                <li id="specialty-2-id" style="display: none">
+                  Ekokardiografi
+                </li>
                 <li id="specialty-3-en">Cardiovascular Imaging</li>
-                <li id="specialty-3-id" style="display: none;">Pencitraan Kardiovaskular</li>
+                <li id="specialty-3-id" style="display: none">
+                  Pencitraan Kardiovaskular
+                </li>
                 <li id="specialty-4-en">Congenital Heart Disease</li>
-                <li id="specialty-4-id" style="display: none;">Penyakit Jantung Bawaan</li>
-                <li id="specialty-5-en">Cardiovascular Prevention & Rehabilitation</li>
-                <li id="specialty-5-id" style="display: none;">Pencegahan dan Rehabilitasi Kardiovaskular</li>
+                <li id="specialty-4-id" style="display: none">
+                  Penyakit Jantung Bawaan
+                </li>
+                <li id="specialty-5-en">
+                  Cardiovascular Prevention & Rehabilitation
+                </li>
+                <li id="specialty-5-id" style="display: none">
+                  Pencegahan dan Rehabilitasi Kardiovaskular
+                </li>
                 <li id="specialty-6-en">Adult Cardiac Surgery</li>
-                <li id="specialty-6-id" style="display: none;">Bedah Jantung Dewasa</li>
+                <li id="specialty-6-id" style="display: none">
+                  Bedah Jantung Dewasa
+                </li>
               </ul>
             </div>
           </div>
-
         </section>
       </main>
     </div>
@@ -451,7 +1303,7 @@
         // Hide/show language content - Intro Text
         const introTextEn = document.getElementById("intro-text-en");
         const introTextId = document.getElementById("intro-text-id");
-        
+
         // Hide/show language content - Title
         const titleEn = document.getElementById("ceo-title-en");
         const titleId = document.getElementById("ceo-title-id");
@@ -472,12 +1324,12 @@
 
         if (lang === "id") {
           // Show all Indonesian elements, hide all English elements
-          elemsEn.forEach(elem => elem.style.display = "none");
-          elemsId.forEach(elem => {
+          elemsEn.forEach((elem) => (elem.style.display = "none"));
+          elemsId.forEach((elem) => {
             const tagName = elem.tagName.toLowerCase();
-            if (tagName === 'span') {
+            if (tagName === "span") {
               elem.style.display = "inline";
-            } else if (tagName === 'strong' || tagName === 'h4') {
+            } else if (tagName === "strong" || tagName === "h4") {
               elem.style.display = "block";
             } else {
               elem.style.display = "block";
@@ -485,10 +1337,10 @@
           });
         } else {
           // Show all English elements, hide all Indonesian elements
-          elemsId.forEach(elem => elem.style.display = "none");
-          elemsEn.forEach(elem => {
+          elemsId.forEach((elem) => (elem.style.display = "none"));
+          elemsEn.forEach((elem) => {
             const tagName = elem.tagName.toLowerCase();
-            if (tagName === 'span') {
+            if (tagName === "span") {
               elem.style.display = "inline";
             } else {
               elem.style.display = "block";

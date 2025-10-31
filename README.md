@@ -24,11 +24,22 @@ A responsive website showcasing Medistra Hospital's Centers of Excellence (COE)
 ```
 medistra-coe-page/
 ├── [specialty].html        # All pages files
-├── [specialty].css         # Styling files
 └── assets/                 # Images and icons
     ├── images/            # Doctor photos and medical images
     └── icons/             # Specialty icons
 ```
+
+## Assets & Images
+
+To view the complete list of uploaded assets and images, please refer to the following spreadsheet:
+
+** [Medistra COE Assets Spreadsheet](https://docs.google.com/spreadsheets/d/1VPP1rm3YmZpp6q4gnp97fPeU70MJ9Nq4X0sbfTkhJbE/edit?gid=0#gid=0)**
+
+This spreadsheet contains information about:
+- Hero images for each COE
+- Icons for each specialty
+- Doctor photos with corresponding file names
+- Accordion content images
 
 ## Multi-Language Support
 
