@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - Medistra Hospital</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Reset and Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        background-color: #ffffff;
+        color: #333;
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      /* Header Section */
+      .header {
+        position: relative;
+      }
+
+      .hero-section {
+        position: relative;
+        height: 300px;
+        background: linear-gradient(
+            135deg,
+            rgba(40, 167, 69, 0.4),
+            rgba(40, 167, 69, 0.25)
+          ),
+          linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.25)),
+          url("assets/gedung_medistra.jpg");
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 4px 20px rgba(40, 167, 69, 0.3),
+          0 8px 40px rgba(40, 167, 69, 0.25),
+          0 12px 60px rgba(40, 167, 69, 0.2),
+          0 0 0 1px rgba(40, 167, 69, 0.1);
+      }
+
+      /* Logo Section Below Hero */
+      .logo-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+        gap: 15px;
+        background-color: #ffffff;
+      }
+
+      .logo {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+      }
+
+      .hospital-title {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .hospital-name {
+        font-family: "Raleway", sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+        color: #28a745;
+        line-height: 1.2;
+      }
+
+      .hospital-subtitle {
+        font-family: "Raleway", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        color: #3cb371;
+        line-height: 1.2;
+      }
+
+      /* Main Content */
+      .main-content {
+        background-color: #ffffff;
+        padding: 30px 20px;
+        border-radius: 20px 20px 0 0;
+        position: relative;
+        z-index: 3;
+        overflow: hidden;
+      }
+
+      .introduction,
+      .services-accordion {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Introduction */
+      .introduction {
+        margin-bottom: 30px;
+      }
+
+      .intro-text {
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        color: #555;
+        text-align: justify;
+      }
+
+      /* Services Accordion */
+      .services-accordion {
+        margin-top: 20px;
+      }
+
+      .accordion-item {
+        border-bottom: 1px solid #e0e0e0;
+        margin-bottom: 0;
+      }
+
+      .accordion-item:last-child {
+        border-bottom: none;
+      }
+
+      .accordion-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        user-select: none;
+      }
+
+      .accordion-header:hover {
+        background-color: #ffffff;
+        padding: 0px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 8px;
+      }
+
+      .service-title {
+        font-family: "Raleway", sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        color: #333;
+        flex: 1;
+      }
+
+      .accordion-icon {
+        font-size: 14px;
+        color: #666;
+        transition: transform 0.3s ease;
+        margin-left: 10px;
+      }
+
+      .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+
+      .accordion-content.active {
+        max-height: 2000px;
+      }
+
+      .section-description {
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 15px;
+        line-height: 1.6;
+      }
+
+      /* Statistics Section */
+      .statistics-section {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin: 20px 0;
+        flex-wrap: wrap;
+      }
+
+      .stat-box {
+        background-color: #e6ffe6;
+        border-radius: 12px;
+        padding: 25px 20px;
+        min-width: 140px;
+        text-align: center;
+        flex: 1;
+        max-width: 160px;
+      }
+
+      .stat-number {
+        font-family: "Raleway", sans-serif;
+        font-size: 36px;
+        font-weight: 600;
+        color: #28a745;
+        margin-bottom: 8px;
+        line-height: 1;
+      }
+
+      .stat-label {
+        font-family: "Raleway", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        color: #28a745;
+        line-height: 1.3;
+      }
+
+      /* Bottom Text Section */
+      .bottom-text {
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #555;
+        margin-top: 20px;
+        margin-bottom: 15px;
+      }
+
+      /* Center of Excellence Cards */
+      .coe-intro-text {
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
+
+      .coe-cards-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin: 20px 0;
+      }
+
+      .coe-card {
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        aspect-ratio: 1;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-decoration: none;
+        display: block;
+      }
+
+      .coe-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .coe-card-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        filter: blur(8px);
+        transform: scale(1.1);
+      }
+
+      .coe-card-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        z-index: 1;
+      }
+
+      .coe-card-icon {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+        margin-bottom: 15px;
+        filter: brightness(0) invert(1);
+        z-index: 2;
+      }
+
+      .coe-card-text {
+        font-family: "Raleway", sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        color: #ffffff;
+        text-align: center;
+        z-index: 2;
+        line-height: 1.3;
+      }
+
+      /* Technology and Facilities Section Styles */
+      .tech-image {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        margin: 20px 0;
+        object-fit: cover;
+      }
+
+      .tech-description,
+      .facilities-description {
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 15px;
+        line-height: 1.6;
+      }
+
+      .tech-list,
+      .facilities-list {
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        color: #555;
+        line-height: 1.8;
+        margin-left: 20px;
+        margin-bottom: 15px;
+      }
+
+      .tech-list li,
+      .facilities-list li {
+        margin-bottom: 8px;
+      }
+
+      /* Certifications Section Styles */
+      .cert-image {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        border-radius: 12px;
+        margin: 20px 0;
+        object-fit: contain;
+        display: block;
+      }
+
+      .cert-description,
+      .services-description,
+      .infection-description {
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 15px;
+        line-height: 1.6;
+      }
+
+      .cert-list {
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        color: #555;
+        line-height: 1.8;
+        margin-left: 20px;
+        margin-bottom: 15px;
+      }
+
+      .cert-list li {
+        margin-bottom: 8px;
+      }
+
+      /* Laboratory Section Styles */
+      .lab-image {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        margin: 20px 0;
+        object-fit: cover;
+      }
+
+      .lab-description,
+      .vvip-description {
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 15px;
+        line-height: 1.6;
+      }
+
+      /* Footer Section Styles */
+      .footer-section {
+        background-color: #e6ffe6;
+        padding: 40px 20px;
+        margin-top: 30px;
+        text-align: center;
+      }
+
+      .footer-title {
+        font-family: "Raleway", sans-serif;
+        font-weight: 600;
+        font-size: 22px;
+        color: #28a745;
+        margin-bottom: 15px;
+        line-height: 1.3;
+      }
+
+      .footer-text {
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        color: #3cb371;
+        line-height: 1.6;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      /* Single card in last row */
+      .coe-card.full-width {
+        grid-column: 1 / -1;
+      }
+
+      /* Active state styling */
+      .accordion-item.active .accordion-header {
+        background-color: #ffffff;
+        padding: 0px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 8px;
+      }
+
+      .accordion-item.active .service-title {
+        color: #000000;
+        background-color: #ffffff;
+      }
+
+      /* Touch-friendly improvements */
+      .accordion-header {
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+      }
+
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 375px) {
+        .hero-section {
+          height: 280px;
+        }
+
+        .logo-section {
+          padding: 30px 15px;
+        }
+
+        .logo {
+          width: 50px;
+          height: 50px;
+        }
+
+        .hospital-name {
+          font-size: 20px;
+        }
+
+        .hospital-subtitle {
+          font-size: 18px;
+        }
+
+        .main-content {
+          padding: 25px 15px;
+        }
+
+        .intro-text {
+          font-size: 15px;
+        }
+
+        .service-title {
+          font-size: 15px;
+        }
+
+        .stat-box {
+          min-width: 120px;
+          padding: 20px 15px;
+        }
+
+        .stat-number {
+          font-size: 32px;
+        }
+
+        .footer-section {
+          padding: 30px 15px;
+        }
+
+        .footer-title {
+          font-size: 20px;
+        }
+
+        .footer-text {
+          font-size: 15px;
+        }
+      }
+
+      @media (max-width: 320px) {
+        .hero-section {
+          height: 260px;
+        }
+
+        .main-content {
+          padding: 20px 12px;
+        }
+
+        .intro-text {
+          font-size: 14px;
+        }
+
+        .footer-section {
+          padding: 25px 12px;
+        }
+
+        .footer-title {
+          font-size: 18px;
+        }
+
+        .footer-text {
+          font-size: 14px;
+        }
+      }
+
+      /* Desktop Styles - Keep mobile's style horizontally */
+      @media (min-width: 768px) {
+        body {
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          min-height: 100vh;
+          background: linear-gradient(135deg, #f0f4f8 0%, #e0ecf3 100%);
+        }
+
+        .page-wrapper {
+          max-width: 500px;
+          width: 100%;
+          background: white;
+          box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+          min-height: 100vh;
+          position: relative;
+        }
+
+        /* Header adjustments */
+        .header {
+          width: 100%;
+        }
+
+        .hero-section {
+          height: 350px;
+          border-radius: 0;
+        }
+
+        .logo-section {
+          padding: 50px 20px;
+        }
+
+        .hospital-name {
+          font-size: 28px;
+        }
+
+        .hospital-subtitle {
+          font-size: 24px;
+        }
+
+        /* Main content adjustments */
+        .main-content {
+          padding: 35px 25px;
+          border-radius: 25px 25px 0 0;
+        }
+
+        .intro-text {
+          font-size: 16px;
+          text-align: justify;
+        }
+
+        .service-title {
+          font-size: 20px;
+        }
+
+        .accordion-header {
+          padding: 20px 0;
+        }
+
+        .statistics-section {
+          margin: 35px 0;
+        }
+
+        .coe-cards-grid {
+          gap: 20px;
+        }
+
+        .coe-card-icon {
+          width: 70px;
+          height: 70px;
+        }
+
+        .coe-card-text {
+          font-size: 16px;
+        }
+
+        .footer-section {
+          padding: 50px 25px;
+        }
+
+        .footer-title {
+          font-size: 24px;
+        }
+
+        .footer-text {
+          font-size: 16px;
+        }
+      }
+
+      /* Smooth transition for window resize */
+      @media (min-width: 768px) {
+        html {
+          transition: all 0.3s ease;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <!-- Header Section -->
+      <header class="header">
+        <div class="hero-section"></div>
+      </header>
+
+      <!-- Logo Section -->
+      <div class="logo-section">
+        <img
+          src="assets/logo_brand.png"
+          alt="Medistra Hospital Logo"
+          class="logo"
+        />
+        <div class="hospital-title">
+          <span class="hospital-name">Medistra</span>
+          <span class="hospital-subtitle">Hospital®</span>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Introduction -->
+        <section class="introduction">
+          <p class="intro-text">
+            Since its establishment on November 28, 1991, Medistra Hospital has
+            become a trusted private hospital in the heart of Jakarta. Known for
+            high-quality medical services,
+          </p>
+          <p class="intro-text">
+            Medistra combines cutting-edge medical technology with top-tier
+            experts, providing a safe, comfortable, and optimal care experience
+            for every patient.
+          </p>
+        </section>
+
+        <!-- Services Accordion -->
+        <section class="services-accordion">
+          <div class="accordion-item active">
+            <div class="accordion-header">
+              <span class="service-title">Facilities and Services</span>
+              <i class="fas fa-chevron-up accordion-icon"></i>
+            </div>
+            <div class="accordion-content active">
+              <p class="section-description">
+                We are committed to providing fast, accurate, and attentive
+                service, prioritizing patient comfort and safety.
+              </p>
+
+              <!-- Statistics Section -->
+              <section class="statistics-section">
+                <div class="stat-box">
+                  <div class="stat-number">197</div>
+                  <div class="stat-label">Specialist & Subspecialists</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-number">150.000</div>
+                  <div class="stat-label">Annual Patients</div>
+                </div>
+              </section>
+
+              <!-- Bottom Text Section -->
+              <section class="bottom-text">
+                <p>
+                  Supported by over 197 specialists and subspecialists, Medistra
+                  serves around 150,000 patients each year, including international
+                  patients. The presence of experienced professors and doctors makes
+                  Medistra a top choice for the community.
+                </p>
+              </section>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span class="service-title">Center of Excellence</span>
+              <i class="fas fa-chevron-down accordion-icon"></i>
+            </div>
+            <div class="accordion-content">
+              <p class="coe-intro-text">
+                Medistra has five centers of excellence that serve as a referral
+                for handling various medical conditions.
+              </p>
+
+              <div class="coe-cards-grid">
+                <!-- Cardiology Card -->
+                <a
+                  href="https://medistra.com/MdsApps/cardiology.html"
+                  class="coe-card"
+                >
+                  <div
+                    class="coe-card-background"
+                    style="background-image: url('https://medistra.com/MdsApps/Images/cardiology/cardiology/doctor_cardiology.jpg');"
+                  ></div>
+                  <div class="coe-card-overlay">
+                    <img
+                      src="https://medistra.com/MdsApps/Images/cardiology/cardiology/icon_Cardiology.png"
+                      alt="Cardiology"
+                      class="coe-card-icon"
+                    />
+                    <span class="coe-card-text">Cardiology</span>
+                  </div>
+                </a>
+
+                <!-- Orthopedic Card -->
+                <a
+                  href="https://medistra.com/MdsApps/orthopedy.html"
+                  class="coe-card"
+                >
+                  <div
+                    class="coe-card-background"
+                    style="background-image: url('https://medistra.com/MdsApps/Images/orthopedic/orthopedic/doctor_orthopedy.jpg');"
+                  ></div>
+                  <div class="coe-card-overlay">
+                    <img
+                      src="https://medistra.com/MdsApps/Images/orthopedic/orthopedic/icon_orthopedy.png"
+                      alt="Orthopedic"
+                      class="coe-card-icon"
+                    />
+                    <span class="coe-card-text">Orthopedic</span>
+                  </div>
+                </a>
+
+                <!-- Oncology Card -->
+                <a
+                  href="https://medistra.com/MdsApps/oncology.html"
+                  class="coe-card"
+                >
+                  <div
+                    class="coe-card-background"
+                    style="background-image: url('https://medistra.com/MdsApps/Images/oncology/oncology/doctor_oncology.jpg');"
+                  ></div>
+                  <div class="coe-card-overlay">
+                    <img
+                      src="https://medistra.com/MdsApps/Images/oncology/oncology/icon_oncology.png"
+                      alt="Oncology"
+                      class="coe-card-icon"
+                    />
+                    <span class="coe-card-text">Oncology</span>
+                  </div>
+                </a>
+
+                <!-- Gastroentero Hepatology Card -->
+                <a
+                  href="https://medistra.com/MdsApps/hepatology.html"
+                  class="coe-card"
+                >
+                  <div
+                    class="coe-card-background"
+                    style="background-image: url('https://medistra.com/MdsApps/Images/hepatology/hepatology/doctor_hepatology.jpg');"
+                  ></div>
+                  <div class="coe-card-overlay">
+                    <img
+                      src="https://medistra.com/MdsApps/Images/hepatology/hepatology/icon_hepatology.png"
+                      alt="Gastroentero Hepatology"
+                      class="coe-card-icon"
+                    />
+                    <span class="coe-card-text"
+                      >Gastroentero Hepatology</span
+                    >
+                  </div>
+                </a>
+
+                <!-- Tropical & Infectious Diseases Card -->
+                <a
+                  href="https://medistra.com/MdsApps/infection.html"
+                  class="coe-card full-width"
+                >
+                  <div
+                    class="coe-card-background"
+                    style="background-image: url('https://medistra.com/MdsApps/Images/infection/infection/doctor_infection.jpg');"
+                  ></div>
+                  <div class="coe-card-overlay">
+                    <img
+                      src="https://medistra.com/MdsApps/Images/infection/infection/icon_infection.png"
+                      alt="Tropical & Infectious Diseases"
+                      class="coe-card-icon"
+                    />
+                    <span class="coe-card-text"
+                      >Tropical & Infectious Diseases</span
+                    >
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span class="service-title">Latest Medical Technology</span>
+              <i class="fas fa-chevron-down accordion-icon"></i>
+            </div>
+            <div class="accordion-content">
+              <img
+                src="assets/mri_tech.jpg"
+                alt="Latest Medical Technology"
+                class="tech-image"
+              />
+              <p class="tech-description">
+                We consistently adopt modern technology to support our services,
+                including:
+              </p>
+              <ul class="tech-list">
+                <li>Philips MRI</li>
+                <li>Velys Robotic System</li>
+                <li>Revolution™ Apex CT-Scan</li>
+                <li>MR Elastography (Magnetic Resonance Elastography/MRE)</li>
+                <li>EUS (Endoscopic Ultrasound)</li>
+                <li>Ultrasonography (GE & Philips)</li>
+                <li>G-Scan Esaote MRI</li>
+                <li>Mammography</li>
+                <li>CBCT (Cone Beam Computed Tomography)</li>
+                <li>Fibroscan Pro 9000</li>
+                <li>Fibroscan iLiv Touch Pro</li>
+                <li>BTL Emsella</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span class="service-title">Modern Facilities</span>
+              <i class="fas fa-chevron-down accordion-icon"></i>
+            </div>
+            <div class="accordion-content">
+              <p class="facilities-description">
+                Medistra Hospital is equipped with various modern facilities for
+                the treatment and diagnosis of cardiovascular diseases, including:
+              </p>
+              <ul class="facilities-list">
+                <li>Intravascular Ultrasound (IVUS)</li>
+                <li>Optical Coherence Tomography (OCT)</li>
+                <li>Rotablator</li>
+                <li>Orbital Atherectomy System (OAS)</li>
+                <li>Intravascular Lithotripsy (IVL)</li>
+                <li>Resting Fractional Flow Reserve (RFR)</li>
+                <li>Fractional Flow Reserve (FFR)</li>
+                <li>Instantaneous Wave-Free Ratio (IFR)</li>
+                <li>Quantitative Flow Ratio (QFR)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span class="service-title">Certifications</span>
+              <i class="fas fa-chevron-down accordion-icon"></i>
+            </div>
+            <div class="accordion-content">
+              <p class="cert-description">
+                Medistra Hospital has received numerous prestigious awards and
+                accreditations, including:
+              </p>
+              <ul class="cert-list">
+                <li>
+                  Paripurna Accreditation from the Hospital Accreditation Institute
+                  under the Ministry of Health of the Republic of Indonesia
+                  (LARS-DHP).
+                </li>
+                <li>
+                  ISO 15189:2022 international quality standard accreditation,
+                  making our laboratory one of the first private hospital labs in
+                  Indonesia to achieve this recognition.
+                </li>
+              </ul>
+              <img
+                src="assets/iso_15189.png"
+                alt="ISO 15189 Certification"
+                class="cert-image"
+              />
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span class="service-title">24-Hour Services</span>
+              <i class="fas fa-chevron-down accordion-icon"></i>
+            </div>
+            <div class="accordion-content">
+              <p class="services-description">
+                With 24-hour facilities, including the emergency room, radiology,
+                laboratory, pharmacy, and ambulance services, we are ready to
+                provide emergency medical care at any time.
+              </p>
+              <p class="services-description">
+                All these services are supported by a highly trained and dedicated
+                medical team.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span class="service-title">Advanced Infection Control</span>
+              <i class="fas fa-chevron-down accordion-icon"></i>
+            </div>
+            <div class="accordion-content">
+              <p class="infection-description">
+                We implement Infection Control Protocols (PPI) according to the
+                highest Ministry of Health standards to create a safe and hygienic
+                hospital environment for patients, families, and medical staff.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span class="service-title"
+                >State-of-the-Art Laboratory Services</span
+              >
+              <i class="fas fa-chevron-down accordion-icon"></i>
+            </div>
+            <div class="accordion-content">
+              <img
+                src="assets/medistra_laboratory.png"
+                alt="State-of-the-Art Laboratory Services"
+                class="lab-image"
+              />
+              <p class="lab-description">
+                The Medistra Laboratory focuses on the quality and accuracy of test
+                results. This commitment is proven by the acquisition of
+                international quality standard accreditation ISO 15189:2022 and
+                national KARS accreditation, ensuring all services meet the highest
+                standards in quality and patient safety.
+              </p>
+              <p class="lab-description">
+                Supported by advanced automated and biomolecular technology, we
+                ensure that every testing process is fast and precise. The integrated
+                digital system, Laboratory Information System (LIS) and Hospital
+                Information System (HIS), guarantees accurate, secure, and efficient
+                results transfer.
+              </p>
+              <p class="lab-description">
+                All operations are run by a team of specialist doctors and trained
+                analysts with Biosafety Level 1 and 2 (BSL-1, BSL-2) standards that
+                guarantee safety. To maintain consistency, we implement a strict
+                Total Quality Assurance system at both national and international
+                levels.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span class="service-title"
+                >Expertise in Handling VVIP and Expatriate Patients</span
+              >
+              <i class="fas fa-chevron-down accordion-icon"></i>
+            </div>
+            <div class="accordion-content">
+              <p class="vvip-description">
+                With over 30 years of experience in handling patients with special
+                needs, including VVIP patients and expatriates, Medistra ensures an
+                attentive care experience that aligns with international standards.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer Section -->
+        <section class="footer-section">
+          <h2 class="footer-title">
+            Medistra Hospital, Your Trusted Health Partner
+          </h2>
+          <p class="footer-text">
+            We are committed to providing the best healthcare, advanced technology,
+            and a compassionate touch to improve the quality of life for every
+            patient.
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      // Accordion functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const accordionItems = document.querySelectorAll(".accordion-item");
+
+        accordionItems.forEach((item) => {
+          const header = item.querySelector(".accordion-header");
+          const content = item.querySelector(".accordion-content");
+          const icon = item.querySelector(".accordion-icon");
+
+          header.addEventListener("click", function () {
+            const isActive = item.classList.contains("active");
+
+            // Close all accordion items
+            accordionItems.forEach((otherItem) => {
+              otherItem.classList.remove("active");
+              otherItem
+                .querySelector(".accordion-content")
+                .classList.remove("active");
+              const otherIcon = otherItem.querySelector(".accordion-icon");
+              otherIcon.classList.remove("fa-chevron-up");
+              otherIcon.classList.add("fa-chevron-down");
+            });
+
+            // Open clicked item if it wasn't active
+            if (!isActive) {
+              item.classList.add("active");
+              content.classList.add("active");
+              icon.classList.remove("fa-chevron-down");
+              icon.classList.add("fa-chevron-up");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
