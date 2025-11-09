@@ -39,54 +39,31 @@
         height: 300px;
         background: linear-gradient(
             135deg,
-            rgba(40, 167, 69, 0.4),
-            rgba(40, 167, 69, 0.25)
+            rgba(36, 94, 128, 0.4),
+            rgba(36, 94, 128, 0.4)
           ),
-          linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.25)),
+          linear-gradient(
+            rgba(255, 255, 255, 0.32),
+            rgba(255, 255, 255, 0.32)
+          ),
           url("assets/gedung_medistra.jpg");
         background-size: cover;
         background-position: center;
-        box-shadow: 0 4px 20px rgba(40, 167, 69, 0.3),
-          0 8px 40px rgba(40, 167, 69, 0.25),
-          0 12px 60px rgba(40, 167, 69, 0.2),
-          0 0 0 1px rgba(40, 167, 69, 0.1);
       }
 
       /* Logo Section Below Hero */
       .logo-section {
         display: flex;
         align-items: center;
-        justify-content: center;
-        padding: 40px 20px;
-        gap: 15px;
+        justify-content: flex-start;
+        padding: 32px 20px 16px;
         background-color: #ffffff;
       }
 
       .logo {
-        width: 60px;
-        height: 60px;
+        width: 221px;
+        height: 64px;
         object-fit: contain;
-      }
-
-      .hospital-title {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .hospital-name {
-        font-family: "Raleway", sans-serif;
-        font-size: 24px;
-        font-weight: 600;
-        color: #28a745;
-        line-height: 1.2;
-      }
-
-      .hospital-subtitle {
-        font-family: "Raleway", sans-serif;
-        font-size: 20px;
-        font-weight: 500;
-        color: #3cb371;
-        line-height: 1.2;
       }
 
       /* Main Content */
@@ -375,7 +352,7 @@
         font-size: 16px;
         color: #555;
         line-height: 1.8;
-        margin-left: 20px;
+        margin-left: 0px;
         margin-bottom: 15px;
       }
 
@@ -404,9 +381,9 @@
 
       /* Footer Section Styles */
       .footer-section {
-        background-color: #e6ffe6;
+        background-color: #E6F1E766;
         padding: 40px 20px;
-        margin-top: 30px;
+        margin: 30px -20px 0;
         text-align: center;
       }
 
@@ -470,16 +447,8 @@
         }
 
         .logo {
-          width: 50px;
-          height: 50px;
-        }
-
-        .hospital-name {
-          font-size: 20px;
-        }
-
-        .hospital-subtitle {
-          font-size: 18px;
+          width: 221px;
+          height: 64px;
         }
 
         .main-content {
@@ -505,6 +474,7 @@
 
         .footer-section {
           padding: 30px 15px;
+          margin: 30px -15px 0;
         }
 
         .footer-title {
@@ -531,6 +501,7 @@
 
         .footer-section {
           padding: 25px 12px;
+          margin: 25px -12px 0;
         }
 
         .footer-title {
@@ -572,15 +543,7 @@
         }
 
         .logo-section {
-          padding: 50px 20px;
-        }
-
-        .hospital-name {
-          font-size: 28px;
-        }
-
-        .hospital-subtitle {
-          font-size: 24px;
+          padding: 56px 28px 18px;
         }
 
         /* Main content adjustments */
@@ -621,6 +584,7 @@
 
         .footer-section {
           padding: 50px 25px;
+          margin: 0px -25px -30px;
         }
 
         .footer-title {
@@ -654,25 +618,25 @@
           alt="Medistra Hospital Logo"
           class="logo"
         />
-        <div class="hospital-title">
-          <span class="hospital-name">Medistra</span>
-          <span class="hospital-subtitle">Hospital®</span>
-        </div>
       </div>
 
       <!-- Main Content -->
       <main class="main-content">
         <!-- Introduction -->
         <section class="introduction">
-          <p class="intro-text">
+          <p class="intro-text" id="intro-text-en">
             Since its establishment on November 28, 1991, Medistra Hospital has
             become a trusted private hospital in the heart of Jakarta. Known for
-            high-quality medical services,
+            high-quality medical services, Medistra combines cutting-edge
+            medical technology with top-tier experts, providing a safe,
+            comfortable, and optimal care experience for every patient.
           </p>
-          <p class="intro-text">
-            Medistra combines cutting-edge medical technology with top-tier
-            experts, providing a safe, comfortable, and optimal care experience
-            for every patient.
+          <p class="intro-text" id="intro-text-id" style="display: none">
+            Sejak berdiri pada 28 November 1991, Medistra Hospital telah menjadi
+            rumah sakit swasta terpercaya di jantung kota Jakarta. Dikenal karena
+            pelayanan medis berkualitas tinggi, Medistra menggabungkan teknologi
+            medis mutakhir dengan tenaga ahli terbaik, memberikan pengalaman
+            perawatan yang aman, nyaman, dan optimal bagi setiap pasien.
           </p>
         </section>
 
@@ -680,34 +644,75 @@
         <section class="services-accordion">
           <div class="accordion-item active">
             <div class="accordion-header">
-              <span class="service-title">Facilities and Services</span>
+              <span class="service-title" id="service-title-1-en"
+                >Facilities and Services</span
+              >
+              <span
+                class="service-title"
+                id="service-title-1-id"
+                style="display: none"
+                >Fasilitas dan Layanan Unggulan</span
+              >
               <i class="fas fa-chevron-up accordion-icon"></i>
             </div>
             <div class="accordion-content active">
-              <p class="section-description">
+              <p class="section-description" id="section-desc-1-en">
                 We are committed to providing fast, accurate, and attentive
                 service, prioritizing patient comfort and safety.
+              </p>
+              <p
+                class="section-description"
+                id="section-desc-1-id"
+                style="display: none"
+              >
+                Kami berkomitmen memberikan pelayanan yang cepat, tepat, dan
+                penuh perhatian, dengan mengutamakan kenyamanan serta keselamatan
+                pasien.
               </p>
 
               <!-- Statistics Section -->
               <section class="statistics-section">
                 <div class="stat-box">
                   <div class="stat-number">197</div>
-                  <div class="stat-label">Specialist & Subspecialists</div>
+                  <div class="stat-label" id="stat-label-1-en">
+                    Specialist & Subspecialists
+                  </div>
+                  <div
+                    class="stat-label"
+                    id="stat-label-1-id"
+                    style="display: none"
+                  >
+                    Spesialis & Subspesialis
+                  </div>
                 </div>
                 <div class="stat-box">
                   <div class="stat-number">150.000</div>
-                  <div class="stat-label">Annual Patients</div>
+                  <div class="stat-label" id="stat-label-2-en">
+                    Annual Patients
+                  </div>
+                  <div
+                    class="stat-label"
+                    id="stat-label-2-id"
+                    style="display: none"
+                  >
+                    Pasien Tahunan
+                  </div>
                 </div>
               </section>
 
               <!-- Bottom Text Section -->
               <section class="bottom-text">
-                <p>
+                <p id="bottom-text-en">
                   Supported by over 197 specialists and subspecialists, Medistra
                   serves around 150,000 patients each year, including international
                   patients. The presence of experienced professors and doctors makes
                   Medistra a top choice for the community.
+                </p>
+                <p id="bottom-text-id" style="display: none">
+                  Didukung oleh lebih dari 197 spesialis dan subspesialis, Medistra
+                  melayani sekitar 150.000 pasien setiap tahun, termasuk pasien
+                  internasional. Keberadaan para profesor dan dokter berpengalaman
+                  menjadikan Medistra sebagai pilihan utama masyarakat.
                 </p>
               </section>
             </div>
@@ -715,13 +720,25 @@
 
           <div class="accordion-item">
             <div class="accordion-header">
-              <span class="service-title">Center of Excellence</span>
+              <span class="service-title" id="service-title-2-en"
+                >Center of Excellence</span
+              >
+              <span
+                class="service-title"
+                id="service-title-2-id"
+                style="display: none"
+                >Pusat Keunggulan (Center of Excellence)</span
+              >
               <i class="fas fa-chevron-down accordion-icon"></i>
             </div>
             <div class="accordion-content">
-              <p class="coe-intro-text">
+              <p class="coe-intro-text" id="coe-intro-en">
                 Medistra has five centers of excellence that serve as a referral
                 for handling various medical conditions.
+              </p>
+              <p class="coe-intro-text" id="coe-intro-id" style="display: none">
+                Medistra memiliki lima pusat keunggulan yang menjadi rujukan
+                penanganan berbagai kondisi medis.
               </p>
 
               <div class="coe-cards-grid">
@@ -740,7 +757,15 @@
                       alt="Cardiology"
                       class="coe-card-icon"
                     />
-                    <span class="coe-card-text">Cardiology</span>
+                    <span class="coe-card-text" id="coe-card-title-1-en"
+                      >Cardiology</span
+                    >
+                    <span
+                      class="coe-card-text"
+                      id="coe-card-title-1-id"
+                      style="display: none"
+                      >Kardiologi</span
+                    >
                   </div>
                 </a>
 
@@ -759,7 +784,15 @@
                       alt="Orthopedic"
                       class="coe-card-icon"
                     />
-                    <span class="coe-card-text">Orthopedic</span>
+                    <span class="coe-card-text" id="coe-card-title-2-en"
+                      >Orthopedic</span
+                    >
+                    <span
+                      class="coe-card-text"
+                      id="coe-card-title-2-id"
+                      style="display: none"
+                      >Ortopedi</span
+                    >
                   </div>
                 </a>
 
@@ -778,7 +811,15 @@
                       alt="Oncology"
                       class="coe-card-icon"
                     />
-                    <span class="coe-card-text">Oncology</span>
+                    <span class="coe-card-text" id="coe-card-title-3-en"
+                      >Oncology</span
+                    >
+                    <span
+                      class="coe-card-text"
+                      id="coe-card-title-3-id"
+                      style="display: none"
+                      >Onkologi</span
+                    >
                   </div>
                 </a>
 
@@ -797,8 +838,14 @@
                       alt="Gastroentero Hepatology"
                       class="coe-card-icon"
                     />
-                    <span class="coe-card-text"
-                      >Gastroentero Hepatology</span
+                    <span class="coe-card-text" id="coe-card-title-4-en">
+                      Gastroentero Hepatology</span
+                    >
+                    <span
+                      class="coe-card-text"
+                      id="coe-card-title-4-id"
+                      style="display: none"
+                      >Gastroenterologi dan Hepatologi</span
                     >
                   </div>
                 </a>
@@ -818,8 +865,14 @@
                       alt="Tropical & Infectious Diseases"
                       class="coe-card-icon"
                     />
-                    <span class="coe-card-text"
-                      >Tropical & Infectious Diseases</span
+                    <span class="coe-card-text" id="coe-card-title-5-en">
+                      Tropical & Infectious Diseases</span
+                    >
+                    <span
+                      class="coe-card-text"
+                      id="coe-card-title-5-id"
+                      style="display: none"
+                      >Penyakit Tropik dan Infeksi</span
                     >
                   </div>
                 </a>
@@ -829,7 +882,15 @@
 
           <div class="accordion-item">
             <div class="accordion-header">
-              <span class="service-title">Latest Medical Technology</span>
+              <span class="service-title" id="service-title-3-en"
+                >Latest Medical Technology</span
+              >
+              <span
+                class="service-title"
+                id="service-title-3-id"
+                style="display: none"
+                >Fasilitas dan Teknologi Medis Terkini</span
+              >
               <i class="fas fa-chevron-down accordion-icon"></i>
             </div>
             <div class="accordion-content">
@@ -838,9 +899,17 @@
                 alt="Latest Medical Technology"
                 class="tech-image"
               />
-              <p class="tech-description">
+              <p class="tech-description" id="tech-desc-en">
                 We consistently adopt modern technology to support our services,
                 including:
+              </p>
+              <p
+                class="tech-description"
+                id="tech-desc-id"
+                style="display: none"
+              >
+                Kami selalu mengadopsi teknologi modern untuk mendukung layanan,
+                di antaranya:
               </p>
               <ul class="tech-list">
                 <li>Philips MRI</li>
@@ -861,13 +930,29 @@
 
           <div class="accordion-item">
             <div class="accordion-header">
-              <span class="service-title">Modern Facilities</span>
+              <span class="service-title" id="service-title-4-en"
+                >Modern Facilities</span
+              >
+              <span
+                class="service-title"
+                id="service-title-4-id"
+                style="display: none"
+                >Fasilitas Modern</span
+              >
               <i class="fas fa-chevron-down accordion-icon"></i>
             </div>
             <div class="accordion-content">
-              <p class="facilities-description">
+              <p class="facilities-description" id="facilities-desc-en">
                 Medistra Hospital is equipped with various modern facilities for
                 the treatment and diagnosis of cardiovascular diseases, including:
+              </p>
+              <p
+                class="facilities-description"
+                id="facilities-desc-id"
+                style="display: none"
+              >
+                Rumah Sakit Medistra dilengkapi dengan berbagai fasilitas modern
+                untuk perawatan dan diagnosis penyakit kardiovaskular, di antaranya:
               </p>
               <ul class="facilities-list">
                 <li>Intravascular Ultrasound (IVUS)</li>
@@ -885,24 +970,46 @@
 
           <div class="accordion-item">
             <div class="accordion-header">
-              <span class="service-title">Certifications</span>
+              <span class="service-title" id="service-title-5-en"
+                >Certifications</span
+              >
+              <span
+                class="service-title"
+                id="service-title-5-id"
+                style="display: none"
+                >Sertifikasi</span
+              >
               <i class="fas fa-chevron-down accordion-icon"></i>
             </div>
             <div class="accordion-content">
-              <p class="cert-description">
+              <p class="cert-description" id="cert-desc-en">
                 Medistra Hospital has received numerous prestigious awards and
                 accreditations, including:
               </p>
+              <p class="cert-description" id="cert-desc-id" style="display: none">
+                Medistra Hospital telah meraih berbagai penghargaan dan akreditasi
+                bergengsi, termasuk:
+              </p>
               <ul class="cert-list">
-                <li>
+                <li id="cert-item-1-en">
                   Paripurna Accreditation from the Hospital Accreditation Institute
                   under the Ministry of Health of the Republic of Indonesia
                   (LARS-DHP).
                 </li>
-                <li>
+                <li id="cert-item-1-id" style="display: none">
+                  Rumah sakit dengan tingkat Akreditasi Paripurna dari Lembaga
+                  Akreditasi Rumah Sakit di bawah Kementerian Kesehatan Republik
+                  Indonesia (LARS-DHP).
+                </li>
+                <li id="cert-item-2-en">
                   ISO 15189:2022 international quality standard accreditation,
                   making our laboratory one of the first private hospital labs in
                   Indonesia to achieve this recognition.
+                </li>
+                <li id="cert-item-2-id" style="display: none">
+                  Akreditasi standar mutu internasional ISO 15189:2022 menjadikan
+                  kami laboratorium rumah sakit swasta di Indonesia yang meraih
+                  akreditasi ini.
                 </li>
               </ul>
               <img
@@ -915,40 +1022,89 @@
 
           <div class="accordion-item">
             <div class="accordion-header">
-              <span class="service-title">24-Hour Services</span>
+              <span class="service-title" id="service-title-6-en"
+                >24-Hour Services</span
+              >
+              <span
+                class="service-title"
+                id="service-title-6-id"
+                style="display: none"
+                >Layanan 24 Jam</span
+              >
               <i class="fas fa-chevron-down accordion-icon"></i>
             </div>
             <div class="accordion-content">
-              <p class="services-description">
+              <p class="services-description" id="services-desc-1-en">
                 With 24-hour facilities, including the emergency room, radiology,
                 laboratory, pharmacy, and ambulance services, we are ready to
                 provide emergency medical care at any time.
               </p>
-              <p class="services-description">
+              <p
+                class="services-description"
+                id="services-desc-1-id"
+                style="display: none"
+              >
+                Dengan fasilitas 24 jam yang mencakup ruang instalasi gawat
+                darurat, radiologi, laboratorium, farmasi, dan ambulans, kami siap
+                memberikan layanan medis darurat kapan saja.
+              </p>
+              <p class="services-description" id="services-desc-2-en">
                 All these services are supported by a highly trained and dedicated
                 medical team.
+              </p>
+              <p
+                class="services-description"
+                id="services-desc-2-id"
+                style="display: none"
+              >
+                Seluruh layanan ini didukung oleh tenaga medis yang terlatih dan
+                berdedikasi tinggi.
               </p>
             </div>
           </div>
 
           <div class="accordion-item">
             <div class="accordion-header">
-              <span class="service-title">Advanced Infection Control</span>
+              <span class="service-title" id="service-title-7-en"
+                >Advanced Infection Control</span
+              >
+              <span
+                class="service-title"
+                id="service-title-7-id"
+                style="display: none"
+                >Pengendalian Infeksi Terdepan</span
+              >
               <i class="fas fa-chevron-down accordion-icon"></i>
             </div>
             <div class="accordion-content">
-              <p class="infection-description">
+              <p class="infection-description" id="infection-desc-en">
                 We implement Infection Control Protocols (PPI) according to the
                 highest Ministry of Health standards to create a safe and hygienic
                 hospital environment for patients, families, and medical staff.
               </p>
+              <p
+                class="infection-description"
+                id="infection-desc-id"
+                style="display: none"
+              >
+                Kami menerapkan Protokol Pengendalian Infeksi (PPI) sesuai standar
+                tertinggi Kementerian Kesehatan untuk menciptakan lingkungan rumah
+                sakit yang aman dan higienis bagi pasien, keluarga, maupun tenaga
+                medis.
+              </p>
             </div>
           </div>
 
           <div class="accordion-item">
             <div class="accordion-header">
-              <span class="service-title"
+              <span class="service-title" id="service-title-8-en"
                 >State-of-the-Art Laboratory Services</span
+              >
+              <span
+                class="service-title"
+                id="service-title-8-id"
+                style="display: none"
+                >Layanan Laboratorium Terkini</span
               >
               <i class="fas fa-chevron-down accordion-icon"></i>
             </div>
@@ -958,42 +1114,91 @@
                 alt="State-of-the-Art Laboratory Services"
                 class="lab-image"
               />
-              <p class="lab-description">
+              <p class="lab-description" id="lab-desc-1-en">
                 The Medistra Laboratory focuses on the quality and accuracy of test
                 results. This commitment is proven by the acquisition of
                 international quality standard accreditation ISO 15189:2022 and
                 national KARS accreditation, ensuring all services meet the highest
                 standards in quality and patient safety.
               </p>
-              <p class="lab-description">
+              <p
+                class="lab-description"
+                id="lab-desc-1-id"
+                style="display: none"
+              >
+                Laboratorium Medistra berfokus pada kualitas dan akurasi hasil
+                pemeriksaan. Komitmen ini dibuktikan dengan perolehan akreditasi
+                standar mutu internasional ISO 15189:2022 dan akreditasi KARS
+                nasional, memastikan semua layanan memenuhi standar tertinggi dalam
+                mutu dan keselamatan pasien.
+              </p>
+              <p class="lab-description" id="lab-desc-2-en">
                 Supported by advanced automated and biomolecular technology, we
                 ensure that every testing process is fast and precise. The integrated
                 digital system, Laboratory Information System (LIS) and Hospital
                 Information System (HIS), guarantees accurate, secure, and efficient
                 results transfer.
               </p>
-              <p class="lab-description">
+              <p
+                class="lab-description"
+                id="lab-desc-2-id"
+                style="display: none"
+              >
+                Didukung oleh teknologi otomatis dan biomolekuler canggih, kami
+                memastikan setiap proses pemeriksaan berjalan cepat dan presisi.
+                Sistem digital terintegrasi Laboratory Information System (LIS) dan
+                Hospital Information System (HIS) menjamin transfer hasil yang
+                akurat, aman, dan efisien.
+              </p>
+              <p class="lab-description" id="lab-desc-3-en">
                 All operations are run by a team of specialist doctors and trained
                 analysts with Biosafety Level 1 and 2 (BSL-1, BSL-2) standards that
                 guarantee safety. To maintain consistency, we implement a strict
                 Total Quality Assurance system at both national and international
                 levels.
               </p>
+              <p
+                class="lab-description"
+                id="lab-desc-3-id"
+                style="display: none"
+              >
+                Seluruh operasional dijalankan oleh tim yang terdiri dari dokter
+                spesialis dan analis terlatih dengan standar Biosafety Level 1 dan 2
+                (BSL-1, BSL-2) yang menjamin keamanan. Untuk menjaga konsistensi,
+                kami menerapkan sistem Total Quality Assurance yang ketat di tingkat
+                nasional maupun internasional.
+              </p>
             </div>
           </div>
 
           <div class="accordion-item">
             <div class="accordion-header">
-              <span class="service-title"
+              <span class="service-title" id="service-title-9-en"
                 >Expertise in Handling VVIP and Expatriate Patients</span
+              >
+              <span
+                class="service-title"
+                id="service-title-9-id"
+                style="display: none"
+                >Keterampilan dalam Menangani Pasien VVIP dan Ekspatriat</span
               >
               <i class="fas fa-chevron-down accordion-icon"></i>
             </div>
             <div class="accordion-content">
-              <p class="vvip-description">
+              <p class="vvip-description" id="vvip-desc-en">
                 With over 30 years of experience in handling patients with special
                 needs, including VVIP patients and expatriates, Medistra ensures an
                 attentive care experience that aligns with international standards.
+              </p>
+              <p
+                class="vvip-description"
+                id="vvip-desc-id"
+                style="display: none"
+              >
+                Dengan pengalaman lebih dari 30 tahun dalam menangani pasien-pasien
+                dengan kebutuhan khusus, termasuk pasien VVIP dan ekspatriat,
+                Medistra memastikan pengalaman perawatan yang penuh perhatian,
+                sesuai dengan standar internasional.
               </p>
             </div>
           </div>
@@ -1001,19 +1206,64 @@
 
         <!-- Footer Section -->
         <section class="footer-section">
-          <h2 class="footer-title">
+          <h2 class="footer-title" id="footer-title-en">
             Medistra Hospital, Your Trusted Health Partner
           </h2>
-          <p class="footer-text">
+          <h2 class="footer-title" id="footer-title-id" style="display: none">
+            Medistra Hospital, Mitra Kesehatan Terpercaya Anda
+          </h2>
+          <p class="footer-text" id="footer-text-en">
             We are committed to providing the best healthcare, advanced technology,
             and a compassionate touch to improve the quality of life for every
             patient.
+          </p>
+          <p class="footer-text" id="footer-text-id" style="display: none">
+            Kami berkomitmen menghadirkan pelayanan kesehatan terbaik, teknologi
+            canggih, dan sentuhan penuh kasih untuk meningkatkan kualitas hidup
+            setiap pasien.
           </p>
         </section>
       </main>
     </div>
 
     <script>
+      // Language detection and content toggling
+      document.addEventListener("DOMContentLoaded", function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const storedLang = localStorage.getItem("selectedLanguage");
+        const lang = urlParams.get("lang") || storedLang || "en";
+
+        const englishElements = document.querySelectorAll('[id$="-en"]');
+        const indonesianElements = document.querySelectorAll('[id$="-id"]');
+
+        const showLanguage = (targetLang) => {
+          if (targetLang === "id") {
+            englishElements.forEach((el) => (el.style.display = "none"));
+            indonesianElements.forEach((el) => {
+              const tag = el.tagName.toLowerCase();
+              if (tag === "span") {
+                el.style.display = "inline";
+              } else {
+                el.style.display = "block";
+              }
+            });
+          } else {
+            indonesianElements.forEach((el) => (el.style.display = "none"));
+            englishElements.forEach((el) => {
+              const tag = el.tagName.toLowerCase();
+              if (tag === "span") {
+                el.style.display = "inline";
+              } else {
+                el.style.display = "block";
+              }
+            });
+          }
+        };
+
+        showLanguage(lang);
+        localStorage.setItem("selectedLanguage", lang);
+      });
+
       // Accordion functionality
       document.addEventListener("DOMContentLoaded", function () {
         const accordionItems = document.querySelectorAll(".accordion-item");
