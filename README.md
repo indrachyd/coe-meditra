@@ -1,14 +1,15 @@
 # Medistra COE Page
 
-A responsive website showcasing Medistra Hospital's Centers of Excellence (COE)
+Responsive, mobile-first pages showcasing Medistra Hospital’s Centers of Excellence (COE) and corporate profile.
 
-## Centers of Excellence
+## Available Pages
 
-- **Cardiology** 
-- **Orthopedic** 
-- **Oncology** 
-- **Hepatology** 
-- **Tropical & Infectious Diseases**
+- `about.html` – Hospital overview, services, technology, certifications, and COE links
+- `cardiology.html`
+- `orthopedy.html`
+- `oncology.html`
+- `hepatology.html`
+- `infection.html`
 
 ## Features
 
@@ -23,13 +24,19 @@ A responsive website showcasing Medistra Hospital's Centers of Excellence (COE)
 
 ```
 medistra-coe-page/
-├── [specialty].html        # All pages files
-└── assets/                 # Images and icons
-    ├── images/            # Doctor photos and medical images
-    └── icons/             # Specialty icons
+├── about.html
+├── cardiology.html
+├── hepatology.html
+├── infection.html
+├── oncology.html
+├── orthopedy.html
+└── assets/
+    ├── gedung_medistra.jpg
+    ├── iso_15189.png
+    ├── logo_brand.png
+    ├── medistra_laboratory.png
+    └── mri_tech.jpg
 ```
-
-## Assets & Images
 
 To view the complete list of uploaded assets and images, please refer to the following spreadsheet:
 
@@ -55,12 +62,8 @@ Add `?lang=en` for English or `?lang=id` for Indonesian
 
 **English:**
 ```
+about.html?lang=id
 cardiology.html?lang=en
-hepatology.html?lang=en
 ```
 
-**Indonesian:**
-```
-cardiology.html?lang=id
-hepatology.html?lang=id
-```
+After the first visit, the chosen language persists via `localStorage` until changed explicitly.
