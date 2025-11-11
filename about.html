@@ -76,6 +76,22 @@
         overflow: hidden;
       }
 
+      .main-content::after {
+        content: "";
+        position: absolute;
+        bottom: 160px;
+        right: 0;
+        width: 320px;
+        height: 320px;
+        background-image: url("https://medistra.com/MdsApps/Images/icon/leaf.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        opacity: 1;
+        pointer-events: none;
+        z-index: 0;
+      }
+
       .introduction,
       .services-accordion {
         position: relative;
@@ -122,7 +138,7 @@
       }
 
       .accordion-header:hover {
-        background-color: #ffffff;
+        background-color: transparent;
         padding: 0px;
         padding-top: 20px;
         padding-bottom: 20px;
@@ -460,6 +476,12 @@
           padding: 25px 15px;
         }
 
+        .main-content::after {
+          width: 240px;
+          height: 240px;
+          bottom: 140px;
+        }
+
         .coe-cards-grid {
           grid-template-columns: repeat(2, minmax(135px, 1fr));
           gap: 12px;
@@ -509,6 +531,12 @@
 
         .main-content {
           padding: 20px 12px;
+        }
+
+        .main-content::after {
+          width: 200px;
+          height: 200px;
+          bottom: 120px;
         }
 
         .coe-cards-grid {
